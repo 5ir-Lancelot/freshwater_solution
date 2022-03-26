@@ -24,6 +24,8 @@ https://www.youtube.com/watch?v=b-M2KQ6_bM4
 4. copy the files for the app in the folder of the new project 
 
 5. Manually install all necessary packages  to run the python code in the virtual env
+    important package used indirectly alwas has to be installed
+    + pip install gunicorn    
 
 6.create a requiremnets text file with all the pip install package + version
 
@@ -43,6 +45,8 @@ https://www.youtube.com/watch?v=b-M2KQ6_bM4
     
 10. log in  command in Pycharm
     heroku login
+    
+
     
 https://github.com/Vitens/phreeqpython
 """
@@ -316,7 +320,7 @@ def update_graph(T,pCO2,alkalinity):
             legend_title_font_color="green",
             height=800, # global plot height
             width=1700,
-            title_text="Equilibrium Solution for Seawater"
+            title_text="Equilibrium Solution for Freshwater"
             
             )
     
