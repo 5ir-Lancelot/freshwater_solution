@@ -18,9 +18,34 @@ how to make it online available:
 https://www.youtube.com/watch?v=b-M2KQ6_bM4
 
 
-1. Open Heroku and add application   (the name of the app will be part of the url)
-2. Create new project in Pycharm choose virtual environment (Virtualenv)
-3. add the python file
+1. Open Heroku website and add application   (the name of the app will be part of the url)
+2. Open Pycharm Community Verion
+3. Create new project in Pycharm Community Verion  choose virtual environment (Virtualenv)
+4. copy the files for the app in the folder of the new project 
+
+5. Manually install all necessary packages  to run the python code in the virtual env
+
+6.create a requiremnets text file with all the pip install package + version
+
+7. create .gitignore file  (or just copy it from the other projects)
+ the gitignore file   is a simple text file with following content:
+     venv
+     *.pyc
+     .env
+     .DS_Store
+8. create a procfile  with the content 
+    web : guincorn  appname_without.py:server
+    
+9. create a requirements file  (command in the Pycharm terminal)
+    this tells heroku which packages are necessary to run the app
+    pip freeze > requirements.txt
+    
+    
+10. log in  command in Pycharm
+    heroku login
+    
+    
+    
 
 
 
