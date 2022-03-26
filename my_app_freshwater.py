@@ -44,12 +44,6 @@ https://www.youtube.com/watch?v=b-M2KQ6_bM4
 10. log in  command in Pycharm
     heroku login
     
-    
-    
-
-
-
-
 https://github.com/Vitens/phreeqpython
 """
 import os
@@ -73,10 +67,6 @@ import phreeqpython
 #database which should be used for the calculations
 pp = phreeqpython.PhreeqPython(database='phreeqc.dat')
 
-
-#for the test
-
-df = pd.read_csv('https://git.io/Juf1t')
 
 
 #from components import solve
