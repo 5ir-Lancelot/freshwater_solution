@@ -24,7 +24,7 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 1. total dissolved inorganic carbon: $$ DIC = \[ CO_2 \] + \[ HCO_3^- \] + \[ CO_3^{-2} \] $$
 
-2. alkalinity **extremely** simplified (carbonate alkalinity:  $$ A_C=\[ HCO_3^{-} \]  +2 \cdot \[ CO_3^{-2} \] $$
+2. alkalinity **extremely** simplified (carbonate alkalinity):  $$ A_C=\[ HCO_3^{-} \]  +2 \cdot \[ CO_3^{-2} \] + \[ OH^{-} \] - \[ H^{+} \] $$
 
 3. First Dissociation Constant of carbonic acid: $$ K_1^{'} = \frac{ \[HCO_3^{-} \] \cdot \[H^{+}\] }{ \[CO_2 \] } $$
 
