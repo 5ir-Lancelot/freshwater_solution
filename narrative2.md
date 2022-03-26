@@ -12,7 +12,7 @@ $$ \[CO_2 \] = \[CO_2(aq) \]+ \[H_2 CO_3 \].$$
 
 Thus the first dissociation constant is actually a combined one of two reactions ( $ CO_2(aq) + H_2 O ->  H_2 CO_3 -> HCO_3^{-} + H^{+} $ ).
 
-The dissociation constansts $K_1^{'}$ $K_2^{'}$ as well as the Henrys law constant $K_H$  are Temperature dependent. This dependece is rather complex to describe so I wont show the equations for the temperature dependande here.
+The dissociation constansts $K_1^{'}$ $K_2^{'}$ as well as the Henrys law constant $K_H$  are Temperature dependent. This dependece is rather complex to describe so I wont show the equations for the temperature dependende here.
 
 All equations neccessary to describe/solve the full carbonate system are listed below:
 
