@@ -191,7 +191,7 @@ app.layout = html.Div([
         dbc.Row(children=[dbc.Col(children=["CO2 partial pressure to equilibrate with [ppm]:"], className="col-md-4"),
                           dbc.Col(children=[CO2_slider], className="col-md-8")]),
         html.Br(),
-        dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L]:"], className="col-md-4"),
+        dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] log10(TA) :"], className="col-md-4"),
                           dbc.Col(children=[alkalinity_slider], className="col-md-8")]),
         html.Br(),
         html.Br(),
