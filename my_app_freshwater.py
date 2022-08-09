@@ -284,13 +284,15 @@ def update_graph(T,pCO2,alkalinity):
     
     
     # the pressure default unit is atm so I convert the ppm to atm
-    p=pCO2*10**-6
+    p=pCO2*1e-6
     
     #if pCO2!=0:
     
     #here I have to check what to use for pressure
     CO2=pp.add_gas({'CO2(g)':p}, pressure=p , fixed_pressure=True)
-    
+
+
+    # reaction with ambient CO2 pressure
     sol.interact(CO2)
     
     
@@ -318,8 +320,8 @@ def update_graph(T,pCO2,alkalinity):
             title_font_size=29,
             title_font_color="red",
             legend_title_font_color="green",
-            height=800, # global plot height
-            width=1700,
+            #height=800, # global plot height
+            #width=1700,
             title_text="Equilibrium Solution for Freshwater"
             
             )
