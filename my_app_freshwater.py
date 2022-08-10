@@ -69,7 +69,8 @@ import pandas as pd
 import phreeqpython
 
 #database which should be used for the calculations
-pp = phreeqpython.PhreeqPython(database='phreeqc.dat')
+# PhreeqPython comes standard with phreeqc.dat, pitzer.dat and vitens.dat
+pp = phreeqpython.PhreeqPython(database='vitens.dat')
 
 
 
