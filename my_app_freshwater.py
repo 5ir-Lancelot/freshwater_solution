@@ -429,8 +429,9 @@ def update_graph(T,pCO2,alkalinity):
     #it is not possible to add latex in interactive dash
 
     #the ouputs are arranged in the way like the app.callback function defines them
+    # the order has to be followed strictly
     # here i have added c = alkalinity
-    return c,fig,"{:.3f}".format(cCO2),"{:.3f}".format(cHCO3),"{:.3f}".format(cCO3),"{:.3f}".format(cNa),"{:.3f}".format(cH),"{:.3f}".format(cOH)
+    return 'You have selected TA="{}"[ueq/L]'.format(alk),fig,"{:.3f}".format(cCO2),"{:.3f}".format(cHCO3),"{:.3f}".format(cCO3),"{:.3f}".format(cNa),"{:.3f}".format(cH),"{:.3f}".format(cOH)
 
 # here comes the speciation
     
