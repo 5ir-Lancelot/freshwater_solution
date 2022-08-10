@@ -193,6 +193,7 @@ app.layout = html.Div([
         html.Br(),
         dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] log10(TA) :"], className="col-md-4"),
                           dbc.Col(children=[alkalinity_slider], className="col-md-8")]),
+        html.Div(id='slider-output-container'),
         html.Br(),
         html.Br(),
         dcc.Graph(id='indicator-graphic'),
@@ -254,7 +255,9 @@ html.Div(id='my-output'),
 # ===========
 # here inputs and outputs of the application are defined
 
-@app.callback(Output("indicator-graphic", "figure"),
+# change here
+@app.callback(Output('slider-output-container','children'),
+              Output("indicator-graphic", "figure"),
               Output("CO2_species","children"),
               Output("HCO3_species","children"),
               Output("CO3_species","children"),
@@ -426,7 +429,8 @@ def update_graph(T,pCO2,alkalinity):
     #it is not possible to add latex in interactive dash
 
     #the ouputs are arranged in the way like the app.callback function defines them
-    return fig,"{:.3f}".format(cCO2),"{:.3f}".format(cHCO3),"{:.3f}".format(cCO3),"{:.3f}".format(cNa),"{:.3f}".format(cH),"{:.3f}".format(cOH)
+    # here i have added c = alkalinity
+    return c,fig,"{:.3f}".format(cCO2),"{:.3f}".format(cHCO3),"{:.3f}".format(cCO3),"{:.3f}".format(cNa),"{:.3f}".format(cH),"{:.3f}".format(cOH)
 
 # here comes the speciation
     
