@@ -321,12 +321,12 @@ def update_graph(T,pCO2,alkalinity):
             title_font_color="red",
             legend_title_font_color="green",
             #height=800, # global plot height
-            #width=1700,
+            width=1000,
             title_text="Equilibrium Solution for Freshwater"
             
             )
     
-   
+
     #
     x_bar=['DIC',r'$HCO_{3_{aq}}^{-1}$','$CO_{3_{aq}}^{-2}$','$CO_{2_{aq}}$']
     
