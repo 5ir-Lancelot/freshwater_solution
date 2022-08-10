@@ -275,10 +275,10 @@ def update_graph(T,pCO2,alkalinity):
     
     
     # because of the log10 scale of the alkalinity slider
-    alkalinity=10**alkalinity
+    alk=10**(alkalinity)
     
     #convert umol/L concentartion in mmol/L  
-    c=alkalinity*1e-3
+    c=alk*1e-3
 
     sol=pp.add_solution_simple({'NaHCO3':c},temperature=20) # in Phreeqc default units are mmol/kgw
     
@@ -320,8 +320,8 @@ def update_graph(T,pCO2,alkalinity):
             title_font_size=29,
             title_font_color="red",
             legend_title_font_color="green",
-            #height=800, # global plot height
-            width=1000,
+            height=800, # global plot height
+            width=1700,
             title_text="Equilibrium Solution for Freshwater"
             
             )
