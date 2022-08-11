@@ -420,7 +420,7 @@ def update_graph(T,pCO2,alkalinity):
     cCO2=sol.species['CO2']*1e+6
     cHCO3=sol.species['HCO3-']*1e+6
     cCO3=sol.species['CO3-2']*1e+6
-    cNa=sol.species['Na+']*1e+6
+    cNa=sol.total('Na+')*1e+6
     cH=sol.species['H+']*1e+6
     cOH=sol.species['OH-']*1e+6
     
