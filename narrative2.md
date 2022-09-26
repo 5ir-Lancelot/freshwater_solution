@@ -47,6 +47,7 @@ When measuring in fresh produced solutions or insitu the reaction kinetics need 
 Another resource I can highly recommend to understand the carbonate system is the Hydrochemistry & Water Analysis software and the instructions by  [aqion](https://www.aqion.de/site/71).
 
 
-
+In the plot the Electrical Conductivity of the solution is displayed. Keep in mind that it is the electrical conductivity for the given temperature and not the generally used EC corrected to 25°C.
+The electrical conductivity however has a very strong temperature dependence as you can see when playing around with the slider.
 
 
