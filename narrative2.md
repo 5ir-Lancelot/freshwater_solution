@@ -40,7 +40,11 @@ The current global mean level of atmospheric partial pressure of CO2 gas you can
 
 The Alkalinity of the water will be simulated with adding solid NaHCO3 to the solution, this is one of the main components of Baking Soda and will dissolve fast in water.
 
+Keep in mind that this simulation shows the solution in equilibrium with the given partial pressure of CO2. This is the open system solution. 
 
+When measuring in fresh produced solutions or insitu the reaction kinetics need to be considered.
+
+Another resource I can highly recommend to understand the carbonate system is the Hydrochemistry & Water Analysis software and the instructions by  [aqion](https://www.aqion.de/site/71).
 
 
 
