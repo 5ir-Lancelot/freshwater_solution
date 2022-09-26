@@ -284,7 +284,7 @@ def update_graph(T,pCO2,alkalinity):
     #convert umol/L concentartion in mmol/L  
     c=alk*1e-3
 
-    sol=pp.add_solution_simple({'NaHCO3':c},temperature=20) # in Phreeqc default units are mmol/kgw
+    sol=pp.add_solution_simple({'NaHCO3':c},temperature=T) # in Phreeqc default units are mmol/kgw
     
     
     # the pressure default unit is atm so I convert the ppm to atm
@@ -384,6 +384,7 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name='CO2aq' ),row=1, col=3)
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name='HCO3aq' ),row=1, col=3)
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name='CO3aq'),row=1, col=3)
+    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['CO3_frac'], mode='lines+markers', name='CO3aq'), row=1, col=3)
     
     
     fig.update_yaxes(title_text="Fraction in decimal ",title_standoff =4, ticksuffix='', row=1, col=3)
