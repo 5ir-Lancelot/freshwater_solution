@@ -329,8 +329,8 @@ def update_graph(T,pCO2,alkalinity):
             title_font_size=29,
             title_font_color="red",
             legend_title_font_color="green",
-            height=800, # global plot height
-            width=1700,
+            height=1800, # global plot height
+            width=700,
             title_text="Equilibrium Solution for Freshwater"
             
             )
@@ -396,9 +396,9 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_trace(go.Scatter(x=lines['pH'], y=lines['CO3_frac'], mode='lines+markers', name='CO3aq'), row=3, col=1)
     
     
-    fig.update_yaxes(title_text="Fraction in decimal ",title_standoff =4, ticksuffix='', row=1, col=3)
+    fig.update_yaxes(title_text="Fraction in decimal ",title_standoff =4, ticksuffix='', row=3, col=1)
     
-    fig.update_xaxes(title_text="pH", row=1, col=3)
+    fig.update_xaxes(title_text="pH", row=3, col=1)
     
     #pH of the solution
     pH=sol.pH
@@ -423,7 +423,7 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_annotation(x=12, y=0.7,
             text="pH={:.2f} <br> EC={:.2f} uS/cm".format(pH,SC),
             showarrow=False,
-            yshift=1,row=1, col=3)
+            yshift=1,row=3, col=1)
     
     #get the concentrations of all the  species in the system
     # 
