@@ -223,7 +223,7 @@ app.layout = html.Div([
         ]),
         html.Br(),
         html.Br(),
-        
+
         dcc.Markdown(some_text, dangerously_allow_html=True),
         
         
@@ -265,6 +265,9 @@ html.Div(id='my-output'),
               Output("Na_species","children"),
               Output("H_species","children"),
               Output("OH_species","children"),
+
+              # new output plot include here 18.10.2022
+
               
               [Input("T_input", "value"),
                Input("CO2_input", "value"),
@@ -309,9 +312,11 @@ def update_graph(T,pCO2,alkalinity):
     
     #marker_color defines the different bar colors (it can be also dependent on paramameters, continiuos or distinct)
     # the numbers refer to different colors ( I dont know the exact colors)
-    
-    fig = make_subplots(rows=1, cols=3, subplot_titles=('Inorganic carbon components <br> in the solution','DIC(T,CO2_atm,pH)',
-                                                        "Fractions of <br> DIC(T,CO2_atm,pH)"),column_widths=[0.3, 0.2, 0.5])
+
+    # Lukas change rows and columns to stack the plots below each other and not side by side
+
+    fig = make_subplots(rows=3, cols=1, subplot_titles=('Inorganic carbon components <br> in the solution','DIC(T,CO2_atm,pH)',
+                                                    "Fractions of <br> DIC(T,CO2_atm,pH)"))  #,column_widths=[0.3, 0.2, 0.8])
     
     # all possible layout settings
     # https://plotly.com/python/reference/layout/
@@ -373,18 +378,22 @@ def update_graph(T,pCO2,alkalinity):
     
     
      # DIC 
-    fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=1, col=2) 
-    fig.update_yaxes(range=[0,10000],row=1, col=2)
+    fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
+    fig.update_yaxes(range=[0,10000],row=2, col=1)
    
-    
+
+    # add trace will add multiple independent lines
+    # row and col so determine where to put the plots
+
+
     
    
    # input is the array and then it is defined which columns are x and y
    
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name='CO2aq' ),row=1, col=3)
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name='HCO3aq' ),row=1, col=3)
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name='CO3aq'),row=1, col=3)
-    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['CO3_frac'], mode='lines+markers', name='CO3aq'), row=1, col=3)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name='CO2aq' ),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name='HCO3aq' ),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name='CO3aq'),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['CO3_frac'], mode='lines+markers', name='CO3aq'), row=3, col=1)
     
     
     fig.update_yaxes(title_text="Fraction in decimal ",title_standoff =4, ticksuffix='', row=1, col=3)
