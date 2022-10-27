@@ -139,7 +139,7 @@ app.index_string = '''
 # ==========
 
 # read in the bjerrum plot csv file as lines
-lines=pd.read_table('bjerrum_plot.csv',sep=',', keep_default_na=False\
+lines=pd.read_table('bjerrum_plot_update_phreeqpython.csv',sep=',', keep_default_na=False\
                     , na_filter=False, header='infer',engine='python', encoding='utf-8')
 
 
@@ -377,7 +377,10 @@ def update_graph(T,pCO2,alkalinity):
     
     
     
-     # DIC 
+     # DIC update
+    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['DIC'], mode='lines+markers', name='CO2aq'), row=3, col=1)
+
+
     fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
     fig.update_yaxes(range=[0,10000],row=2, col=1)
    
@@ -393,7 +396,7 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name='CO2aq' ),row=3, col=1)
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name='HCO3aq' ),row=3, col=1)
     fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name='CO3aq'),row=3, col=1)
-    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['CO3_frac'], mode='lines+markers', name='CO3aq'), row=3, col=1)
+
     
     
     fig.update_yaxes(title_text="Fraction in decimal ",title_standoff =4, ticksuffix='', row=3, col=1)
@@ -413,6 +416,7 @@ def update_graph(T,pCO2,alkalinity):
     
     
     # Add shapes
+    # draw pH line and make an annotation
     fig.update_layout(
             shapes=[
                     #draw a shape in the third plot   
