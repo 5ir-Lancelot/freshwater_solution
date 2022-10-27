@@ -295,7 +295,7 @@ def update_graph(T,pCO2,alkalinity):
     
     # the function equilizie needs the phreeqc input the partial pressure in negative log10 scale
 
-    input_pCO2=-np.log10(p)
+    input_pCO2=np.log10(p)
     
 
     # reaction with ambient CO2 pressure
