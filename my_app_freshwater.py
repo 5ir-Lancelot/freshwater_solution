@@ -143,6 +143,10 @@ lines=pd.read_table('bjerrum_plot_update_phreeqpython.csv',sep=',', keep_default
                     , na_filter=False, header='infer',engine='python', encoding='utf-8')
 
 
+DIC_line=pd.read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_default_na=False\
+                    , na_filter=False, header='infer',engine='python', encoding='utf-8')
+
+
 # Use the following function when accessing the value of 'my-slider'
 # in callbacks to transform the output value to logarithmic
 def transform_value(value):
@@ -376,19 +380,26 @@ def update_graph(T,pCO2,alkalinity):
     
     
     
-     # DIC update
-    fig.add_trace(go.Scatter(x=lines['pH'], y=lines['DIC'], mode='lines+markers', name='CO2aq'), row=3, col=1)
+     # create DIC plot from the input data
+    fig.add_trace(go.Scatter(x=DIC_line['pH'], y=DIC_line['DIC'], mode='lines+markers', name='CO2aq'), row=2, col=1)
 
 
-    fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
-    fig.update_yaxes(range=[0,10000],row=2, col=1)
+    #add a single point (pH,DIC) of the real simulation
+    # pH of the solution
+    pH = sol.pH
+
+    # DIC of the solution
+    DIC = (sol.total('CO2')+sol.total('HCO3')+sol.total('CO3'))*1000  #convert it to umol
+
+    #fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
+    #fig.update_yaxes(range=[0,10000],row=2, col=1)
    
 
     # add trace will add multiple independent lines
     # row and col so determine where to put the plots
 
 
-    
+    # add the last plot
    
    # input is the array and then it is defined which columns are x and y
    
