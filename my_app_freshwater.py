@@ -316,7 +316,7 @@ def update_graph(T,pCO2,alkalinity):
     # Lukas change rows and columns to stack the plots below each other and not side by side
 
     fig = make_subplots(rows=3, cols=1, subplot_titles=('Inorganic carbon components <br> in the solution','DIC(T,CO2_atm,pH)',
-                                                    "Fractions of <br> DIC(T,CO2_atm,pH)"))  ,column_widths=[1])
+                                                    "Fractions of <br> DIC(T,CO2_atm,pH)") ,column_widths=[1])
     
     # all possible layout settings
     # https://plotly.com/python/reference/layout/
@@ -330,7 +330,7 @@ def update_graph(T,pCO2,alkalinity):
             title_font_color="red",
             legend_title_font_color="green",
             height=1800, # global plot height
-            width=700,
+            width=2000,
             title_text="Equilibrium Solution for Freshwater"
             
             )
