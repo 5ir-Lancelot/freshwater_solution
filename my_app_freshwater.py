@@ -391,7 +391,7 @@ def update_graph(T,pCO2,alkalinity):
     # DIC of the solution
     DIC = (sol.total('CO2')+sol.total('HCO3')+sol.total('CO3'))*1000  #convert it to umol
 
-    fig.add_trace(go.Scatter(x=pH, y=DIC, mode='lines+markers', name='DIC solution'),row=2, col=1)
+   #fig.add_trace(go.Scatter(x=pH, y=DIC, mode='lines+markers', name='DIC solution'),row=2, col=1)
 
 
     fig.update_yaxes(title_text="concentration [umol/L]",type='log', row=2, col=1)
