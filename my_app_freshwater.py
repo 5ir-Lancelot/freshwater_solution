@@ -381,7 +381,7 @@ def update_graph(T,pCO2,alkalinity):
     
     
      # create DIC plot from the input data
-    fig.add_trace(go.Scatter(x=DIC_line['pH'], y=DIC_line['DIC'], mode='lines+markers', name='CO2aq'), row=2, col=1)
+    fig.add_trace(go.Scatter(x=DIC_line['pH'], y=DIC_line['DIC'], mode='lines+markers', name='DIC reference 415ppm , 25°C'), row=2, col=1)
 
 
     #add a single point (pH,DIC) of the real simulation
@@ -391,9 +391,14 @@ def update_graph(T,pCO2,alkalinity):
     # DIC of the solution
     DIC = (sol.total('CO2')+sol.total('HCO3')+sol.total('CO3'))*1000  #convert it to umol
 
+    fig.add_trace(go.Scatter(x=pH, y=DIC, mode='lines+markers', name='DIC solution'),row=2, col=1)
+
+
+    fig.update_yaxes(title_text="concentration [umol/L]",type='log', row=2, col=1)
+
     #fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
     #fig.update_yaxes(range=[0,10000],row=2, col=1)
-   
+
 
     # add trace will add multiple independent lines
     # row and col so determine where to put the plots
