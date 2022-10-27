@@ -293,14 +293,13 @@ def update_graph(T,pCO2,alkalinity):
     # the pressure default unit is atm so I convert the ppm to atm
     p=pCO2*1e-6
     
-    #if pCO2!=0:
-    
-    #here I have to check what to use for pressure
-    CO2=pp.add_gas({'CO2(g)':p}, pressure=p , fixed_pressure=True)
+    # the function equilizie needs the phreeqc input the partial pressure in negative log10 scale
 
+    input_pCO2=-np.log10(p)
+    
 
     # reaction with ambient CO2 pressure
-    sol.interact(CO2)
+    sol.equalize(['CO2(g)'], [input_pCO2])
     
     
 
