@@ -393,7 +393,7 @@ def update_graph(T,pCO2,alkalinity):
 
     fig.add_trace(go.Scatter(x=[pH], y=[DIC], mode='markers', name='DIC solution', marker=dict(
             color='LightSkyBlue',
-            size=120,
+            size=50,
             line=dict(
                 color='MediumPurple',
                 width=12))
