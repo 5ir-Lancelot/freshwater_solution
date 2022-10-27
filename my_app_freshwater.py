@@ -391,7 +391,7 @@ def update_graph(T,pCO2,alkalinity):
     # DIC of the solution
     DIC = (sol.total('CO2',units='mol')+sol.total('HCO3',units='mol')+sol.total('CO3',units='mol')) #convert it to mol
 
-    #fig.add_trace(go.Scatter(x=pH, y=DIC, mode='markers', name='DIC solution'), row=2, col=1)
+    fig.add_trace(go.Scatter(x=6, y=100, mode='markers', name='DIC solution'), row=2, col=1)
 
     # marker style
     # marker=dict(
