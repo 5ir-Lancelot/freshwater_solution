@@ -373,7 +373,7 @@ def update_graph(T,pCO2,alkalinity):
     
     #to see the very big differences I use a logarithmic scale
     # Update xaxis properties  for just the first plot
-    fig.update_yaxes(title_text="concentration [umol/L]", row=1, col=1)
+    fig.update_yaxes(title_text="concentration [mol/L]", row=1, col=1)
     
     # attention range is in log so 10^0  to 10^6
     
@@ -389,9 +389,9 @@ def update_graph(T,pCO2,alkalinity):
     pH = sol.pH
 
     # DIC of the solution
-    DIC = (sol.total('CO2')+sol.total('HCO3')+sol.total('CO3'))*1000  #convert it to umol
+    DIC = (sol.total('CO2',units='mol')+sol.total('HCO3',units='mol')+sol.total('CO3',units='mol')) #convert it to mol
 
-    fig.add_trace(go.Scatter(x=pH, y=DIC, name='DIC solution'),row=2, col=1)
+    fig.add_trace(go.Scatter(x=pH, y=DIC, name='DIC solution'), row=2, col=1)
 
     # marker style
     # marker=dict(
