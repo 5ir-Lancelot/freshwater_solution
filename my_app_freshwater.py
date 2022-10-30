@@ -334,8 +334,8 @@ def update_graph(T,pCO2,alkalinity):
             legend_title_font_color="green",
             height=1800, # global plot height
             width=2000,
-            title_text="Equilibrium Solution for Freshwater"
-            
+            title_text="Equilibrium Solution for Freshwater",
+            legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
             )
     
 
