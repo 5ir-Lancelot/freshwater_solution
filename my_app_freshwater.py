@@ -391,6 +391,7 @@ def update_graph(T,pCO2,alkalinity):
     # DIC of the solution
     DIC = (sol.total('CO2',units='mol')+sol.total('HCO3',units='mol')+sol.total('CO3',units='mol')) #convert it to mol
 
+    #make the etxra dot for the current DIC value
     fig.add_trace(go.Scatter(x=[pH], y=[DIC], mode='markers', name='DIC solution', marker=dict(
             color='LightSkyBlue',
             size=50,
@@ -398,6 +399,13 @@ def update_graph(T,pCO2,alkalinity):
                 color='MediumPurple',
                 width=12))
                              ), row=2, col=1)
+
+
+    # make annotation at the value slighly shiftet in the
+    fig.add_annotation(x=pH-1, y=DIC,
+                       text="pH={:.2f} <br> DIC={:.2f} mol/l".format(pH, DIC),
+                       showarrow=False,
+                       yshift=1, row=2, col=1)
 
     # marker style
     # marker=dict(
@@ -409,7 +417,7 @@ def update_graph(T,pCO2,alkalinity):
     #             )
     #         )
 
-    fig.update_yaxes(title_text="concentration [umol/L]",type='log', row=2, col=1)
+    fig.update_yaxes(title_text="concentration [mol/L]",type='log', row=2, col=1)
 
     #fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
     #fig.update_yaxes(range=[0,10000],row=2, col=1)
