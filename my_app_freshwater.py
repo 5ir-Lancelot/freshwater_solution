@@ -403,7 +403,7 @@ def update_graph(T,pCO2,alkalinity):
 
     # make annotation at the value slighly shiftet in the
     fig.add_annotation(x=pH-1, y=DIC,
-                       text="pH={:.2f} <br> DIC={:.2f} mol/l".format(pH, DIC),
+                       text="pH={:.2f} <br> DIC={:.6f} mol/l".format(pH, DIC),
                        showarrow=False,
                        yshift=1, row=2, col=1)
 
