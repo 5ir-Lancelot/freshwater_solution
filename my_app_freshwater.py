@@ -6,6 +6,11 @@ Created on Thu Dec  9 14:05:38 2021
 
 the framework used for this python app is Flask
 
+Developers can develop the Python backend framework any way they need, however, it was designed for applications that are open-ended.
+Flask has been used by big companies, which include LinkedIn and Pinterest.
+Compared to Django, Flask is best suited for small and easy projects.
+Thus, you can expect a web server development, support for Google App Engine as well as in-built unit testing.
+
 my app should be tidied up and inspired by Chris one
 
 path to open 
@@ -56,8 +61,8 @@ import os
 import flask
 import dash
 import dash_bootstrap_components as dbc
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import dash_defer_js_import as dji
