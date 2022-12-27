@@ -18,11 +18,13 @@ import PyCO2SYS as pyco2
 
 
 
+import pandas
+import numpy as np
 import pandas as pd
 
-
 #for the line plot take range of pH
-pH_range=np.linspace(0,14,1000)
+# use much less datapoints to make app smaller
+pH_range=np.linspace(0,14,100)
 
 #fractions
 lines=pd.DataFrame(data=np.zeros([pH_range.size,4]),columns=['pH','CO2_frac','HCO3_frac','CO3_frac'])
