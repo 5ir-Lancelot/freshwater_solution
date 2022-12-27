@@ -66,7 +66,7 @@ from dash import html
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import dash_defer_js_import as dji
-import numpy as np
+import math as np
 
 from plotly.subplots import make_subplots
 
@@ -93,6 +93,8 @@ external_scripts = ['https://code.jquery.com/jquery-3.2.1.slim.min.js',
                     'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
                     'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js']
 
+# no clue what these external scripts do
+#external_scripts=[dbc.]
 # Server definition
 
 server = flask.Flask(__name__)
