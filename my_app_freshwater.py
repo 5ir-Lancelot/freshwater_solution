@@ -154,10 +154,6 @@ DIC_line=pd.read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_de
                     , na_filter=False, header='infer',engine='python', encoding='utf-8')
 
 
-# Use the following function when accessing the value of 'my-slider'
-# in callbacks to transform the output value to logarithmic
-def transform_value(value):
-    return 10 ** value
 
 
 
