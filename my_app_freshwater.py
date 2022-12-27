@@ -105,6 +105,9 @@ app = dash.Dash(__name__,
                 external_scripts=external_scripts,
                 server=server)
 
+# title taht will be visible in the browser tab
+app.title = 'Open Carbonate System Alkalinity Calculations'
+
 # for Heroku to regognize it
 server=app.server
 
