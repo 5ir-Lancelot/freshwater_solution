@@ -1,14 +1,15 @@
 {
-  "builds": [
-    {
-      "src": "my_app_freshwater.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "my_app_freshwater.py"
-    }
-  ]
+    "version": 2,
+    "builds": [
+        {
+            "src": "./my_app_freshwater.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
