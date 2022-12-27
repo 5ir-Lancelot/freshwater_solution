@@ -17,7 +17,6 @@ path to open
 cd C:\Daten\Transfer\Karriere\nebenjob_conductivity\python_simulation
 
 
-
 then run it from the console anaconde prompt
 
 python my_app_freshwater.py
