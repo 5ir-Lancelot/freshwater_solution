@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "api/index.py",
+      "src": "my_app_freshwater.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/index.py"
+      "dest": "my_app_freshwater.py"
     }
   ]
 }
