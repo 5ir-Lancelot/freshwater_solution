@@ -4,6 +4,8 @@ Created on Thu Dec  9 14:05:38 2021
 
 @author: watda
 
+the framework used for this python app is Flask
+
 my app should be tidied up and inspired by Chris one
 
 path to open 
