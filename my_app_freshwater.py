@@ -302,6 +302,7 @@ def update_graph(T,pCO2,alkalinity):
     input_pCO2=np.log10(p)
     
 
+    # new function from phreeqc package used this time
     # reaction with ambient CO2 pressure
     sol.equalize(['CO2(g)'], [input_pCO2])
     
