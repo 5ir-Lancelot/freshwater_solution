@@ -2,6 +2,8 @@
 
  deploy pyhon flask app in vercel to make it online
  
+ Vercel is a  fully managed web hosting service that supports Python
+ 
  ## How it Works
  Inspiration
  
