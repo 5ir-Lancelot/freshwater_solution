@@ -1,13 +1,14 @@
-# Flask + Vercel
+# Full Stack python Flask app + Digital Ocean
 
- deploy pyhon flask app in vercel to make it online
+ deploy pyhon flask app in digital ocean basic plan (5$/month) to make it online
  
- Vercel is a  fully managed web hosting service that supports Python
+ Digital Ocean is a fully managed web hosting service that supports Python
+
  
  ## How it Works
- Inspiration
- 
- https://dev.to/andrewbaisden/how-to-deploy-a-python-flask-app-to-vercel-2o5k
+ Put the whole code in one repository on your Github. Make an digital ocean account and connect it to your GitHub
+ to import the repository. Then you can deploy it from there  with auto update. Any changes in the GitHub code will
+ then be automatically applied to the published website.
  
 
   ## Tipps and Tricks
