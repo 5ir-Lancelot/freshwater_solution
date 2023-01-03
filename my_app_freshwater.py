@@ -72,7 +72,7 @@ from numpy import log10
 
 from plotly.subplots import make_subplots
 
-from pandas import read_table
+import pandas as pd
 
 #import the package for carbonate system calculation chemistry
 import phreeqpython
