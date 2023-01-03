@@ -66,12 +66,13 @@ from dash import html
 from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import dash_defer_js_import as dji
-import math as np
+
+from numpy import log10
 
 
 from plotly.subplots import make_subplots
 
-import pandas as pd
+from pandas import read_table
 
 #import the package for carbonate system calculation chemistry
 import phreeqpython
@@ -152,11 +153,11 @@ app.index_string = '''
 # ==========
 
 # read in the bjerrum plot csv file as lines
-lines=pd.read_table('bjerrum_plot_update_phreeqpython.csv',sep=',', keep_default_na=False\
+lines=read_table('bjerrum_plot_update_phreeqpython.csv',sep=',', keep_default_na=False\
                     , na_filter=False, header='infer',engine='python', encoding='utf-8')
 
 
-DIC_line=pd.read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_default_na=False\
+DIC_line=read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_default_na=False\
                     , na_filter=False, header='infer',engine='python', encoding='utf-8')
 
 
@@ -180,8 +181,8 @@ T_slider=dcc.Slider(id='T_input', min=T_range[0], max=T_range[1], step=0.5, mark
 CO2_slider=dcc.Slider(id='CO2_input', min=CO2_range[0], max=CO2_range[1], step=1, marks={x: str(x)+'ppm' for x in range(CO2_range[0],CO2_range[1],1000)},
         value=415, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
 
-alkalinity_slider=dcc.Slider(id='alkalinity_input', min=np.log10(alkalinity_range[0]) ,max=np.log10(alkalinity_range[1]), step=0.01,
-        marks={x: '{:.0e}'.format(10**x)+' ueq/L' for x in range(0,6,int(1))},value=np.log10(2500),
+alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0]) ,max=log10(alkalinity_range[1]), step=0.01,
+        marks={x: '{:.0e}'.format(10**x)+' ueq/L' for x in range(0,6,int(1))},value=log10(2500),
         tooltip={"placement": "bottom", "always_visible": True},
         updatemode='drag',drag_value=3)
 
@@ -308,7 +309,7 @@ def update_graph(T,pCO2,alkalinity):
     
     # the function equilizie needs the phreeqc input the partial pressure in negative log10 scale
 
-    input_pCO2=np.log10(p)
+    input_pCO2=log10(p)
     
 
     # new function from phreeqc package used this time
