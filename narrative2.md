@@ -32,6 +32,8 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 5. Solubility of Gas (Henrys law constant for ): $$ K_H=\frac{ \[CO_2 \]  }{ f\_{CO_2,a} } $$
 
+6. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \] $$
+
 
 There are many 
 However the Simulation you find here is not calculated with the strong simplification of Alkalinity. Everything is calculated with [phreeqpython](https://github.com/Vitens/phreeqpython) a python toolbox designed for solving environmental chemistry problems.
