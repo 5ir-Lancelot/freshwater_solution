@@ -34,6 +34,8 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 6. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \]  $$
 
+7. When other bases (HB) are involved:  $$ K_HB = \frac{ \[H^{+} \] \[B^{-} \] $$
+
 
 There are many 
 However the Simulation you find here is not calculated with the strong simplification of Alkalinity. Everything is calculated with [phreeqpython](https://github.com/Vitens/phreeqpython) a python toolbox designed for solving environmental chemistry problems.
