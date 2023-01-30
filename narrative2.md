@@ -34,7 +34,7 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 6. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \]  $$
 
-7. When other bases (HB) are involved:  $$ K_HB = \frac{ \[H^{+} \] \[B^{-} \] $$
+7. When other weak acids (HB) are involved:  $$ K_HB = \frac{ \[ H^{+} \] \[ B^{-} \]}{ \[HB \]} $$
 
 
 There are many 
