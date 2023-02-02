@@ -1,4 +1,4 @@
-# Carbon Dioxide Dissolution Simulation 
+# Carbon Dioxide Dissolution Simulation
 
 _Lukas Rieder_
 
@@ -18,7 +18,7 @@ All equations neccessary to describe/solve the full carbonate system are listed 
 
 
 <!--- This is an HTML comment in Markdown. For some reason the regular Latex _{i}  is not accepted. Use just _i instead. Because [ ] referes to
-links in markdown files   the squared brackets have to be typed in this way:  \[   \] . In the equations leave enough whitespaces especially at end and beginning. For biger subscripts longer than one character: to prevent the blog software from interpreting the underscores as meaning italics use '\_{xy}' instead of '_{xy}' -->
+links in markdown files   the squared brackets have to be typed in this way:  \[   \] . In the equations leave enough whitespaces especially at end and beginning. For bigger subscripts longer than one character: to prevent the blog software from interpreting the underscores as meaning italics use '\_{xy}' instead of '_{xy}' -->
 
 <!---  https://www.mathelounge.de/509545/mathjax-latex-basic-tutorial-und-referenz-deutsch -->
 
@@ -30,25 +30,26 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 4. Second Dissociation Constant of carbonic acid: $$ K_2^{'}=\frac{ \[CO_3^{-2} \] \cdot \[H^{+} \] }{ \[ HCO_3^{-}  \] } $$
 
-5. Solubility of Gas (Henrys law constant for ): $$ K_H=\frac{ \[CO_2 \]  }{ f\_{CO_2,a} } $$
+5. Solubility of Gas (Henry's law constant $H$ \[L atm / mol \] ): $$ K_H=\frac{ \[CO_2 \]  }{ H } $$
 
-6. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \]  $$
+6. Temperature dependence of Henry's law constant $H(T)$,  $ H\_{ref} $ is the Henry's law constant of CO2 at the reference temperature $ T_\{ref}=298.15 K $ and the Temperature $T$ must be used in Kelvin:  $$ H(T) = H\_{ref} \cdot exp(2400 * (\frac{1}{T} - \frac{1}{T\_{ref}})) $$
 
-7. When other weak acids (HB) are involved:  $$ K_{HB} = \frac{ \[ H^{+} \] \[ B^{-} \]}{ \[HB \]} $$
+7. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \]  $$
+
+8. When other weak acids (HB) are involved:  $$ K_{HB} = \frac{ \[ H^{+} \] \[ B^{-} \]}{ \[HB \]} $$
 
 
 
 
-There are many 
-However the Simulation you find here is not calculated with the strong simplification of Alkalinity. Everything is calculated with [phreeqpython](https://github.com/Vitens/phreeqpython) a python toolbox designed for solving environmental chemistry problems.
+However the simulation you find here is not calculated with the simplification of alkalinity. Everything is calculated with [phreeqpython](https://github.com/Vitens/phreeqpython) a python toolbox designed for solving environmental chemistry problems.
 
 The current global mean level of atmospheric partial pressure of CO2 gas you can get from [Mauna Loa Observatory](https://gml.noaa.gov/ccgg/trends/global.html).
 
-The Alkalinity of the water will be simulated with adding solid NaHCO3 to the solution, this is one of the main components of Baking Soda and will dissolve fast in water.
+The alkalinity of the water will be simulated with adding solid NaHCO3 to the solution, this is one of the main components of baking soda and will dissolve fast in water.
 
 Keep in mind that this simulation shows the solution in equilibrium with the given partial pressure of CO2. This is the open system solution. 
 
-When measuring in fresh produced solutions or insitu the reaction kinetics need to be considered.
+When measuring in fresh produced solutions or insitu in the nature the reaction kinetics need to be considered.
 
 Another resource I can highly recommend to understand the carbonate system is the Hydrochemistry & Water Analysis software and the instructions by  [aqion](https://www.aqion.de/site/71).
 
