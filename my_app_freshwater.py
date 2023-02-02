@@ -235,6 +235,8 @@ app.layout = html.Div([
         html.Tr([html.Td(['Na+   = ']), html.Td(id='Na_species'), html.Td("[umol/l]") ]),
         html.Tr([html.Td(['H+    = ']), html.Td(id='H_species'), html.Td("[umol/l]") ]),
         html.Tr([html.Td(['OH-  =   ']), html.Td(id='OH_species'), html.Td("[umol/l]") ]),
+        html.Tr([html.Td(['NaCO3- =   ']), html.Td(id='NaCO3_species'), html.Td("[umol/l]") ]),
+        html.Tr([html.Td(['table =   ']), html.Td(id='species_dict'), html.Td("[umol/l]") ])
         ]),
         html.Br(),
         html.Br(),
@@ -280,6 +282,8 @@ html.Div(id='my-output'),
               Output("Na_species","children"),
               Output("H_species","children"),
               Output("OH_species","children"),
+              Output("NaCO3_species","children"),
+              Output("species_dict","children"),
 
               # new output plot include here 18.10.2022
 
@@ -480,13 +484,14 @@ def update_graph(T,pCO2,alkalinity):
             yshift=1,row=3, col=1)
     
     #get the concentrations of all the  species in the system
-    # 
+    # total
     cCO2=sol.species['CO2']*1e+6
     cHCO3=sol.species['HCO3-']*1e+6
     cCO3=sol.species['CO3-2']*1e+6
     cNa=sol.elements['Na']*1e+6
     cH=sol.species['H+']*1e+6
     cOH=sol.species['OH-']*1e+6
+    cNaCO3=sol.species['NaCO3-']*1e+6
     
     
     #fig.update_layout(height=600, width=800, title_text=r"$\alpha Simulation of Dissolved Carbon Dioxide <br> (assume open system in equilibrium) <br> <br>$")
@@ -496,7 +501,7 @@ def update_graph(T,pCO2,alkalinity):
     #the ouputs are arranged in the way like the app.callback function defines them
     # the order has to be followed strictly
     # here i have added c = alkalinity
-    return 'You have selected TA={:.2f} [ueq/L]'.format(alk),fig,"{:.3f}".format(cCO2),"{:.3f}".format(cHCO3),"{:.3f}".format(cCO3),"{:.3f}".format(cNa),"{:.3f}".format(cH),"{:.3f}".format(cOH)
+    return 'You have selected TA={:.2f} [ueq/L]'.format(alk),fig,"{:.1f}".format(cCO2),"{:.1f}".format(cHCO3),"{:.1f}".format(cCO3),"{:.1f}".format(cNa),"{:.1f}".format(cH),"{:.1f}".format(cOH),"{:.1f}".format(cNaCO3), str(sol.species)
 
 # here comes the speciation
     
