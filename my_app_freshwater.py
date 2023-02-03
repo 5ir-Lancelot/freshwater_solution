@@ -58,25 +58,20 @@ https://www.youtube.com/watch?v=b-M2KQ6_bM4
 https://github.com/Vitens/phreeqpython
 """
 import os
-import flask
+
 import dash
 import dash_bootstrap_components as dbc
-from dash import dcc
+import dash_defer_js_import as dji
+import flask
+import pandas as pd
+# import the package for carbonate system calculation chemistry
+import phreeqpython
+import plotly.graph_objects as go
+from dash import dcc, dash_table
 from dash import html
 from dash.dependencies import Input, Output
-import plotly.graph_objects as go
-import dash_defer_js_import as dji
-
 from numpy import log10
-
-
 from plotly.subplots import make_subplots
-
-import pandas as pd
-
-
-#import the package for carbonate system calculation chemistry
-import phreeqpython
 
 #database which should be used for the calculations
 # PhreeqPython comes standard with phreeqc.dat, pitzer.dat and vitens.dat
@@ -212,7 +207,7 @@ app.layout = html.Div([
         html.Div(id='slider-output-container'),
         html.Br(),
         html.Br(),
-        dcc.Graph(id='indicator-graphic'),
+        dcc.Graph(id='indicator-graphic',style={'width': '30%', 'display': 'inline-block', 'vertical-align': 'middle'}),
         
         
         
@@ -223,21 +218,22 @@ app.layout = html.Div([
 #         dcc.Graph(id='temperature'),
 # =============================================================================
         html.Br(),
-        html.B('This is the resulting speciation after the system is in Equilibrium with the atmosphere:'),
+        html.B('This is the resulting speciation after the water is in equilibrium with the atmosphere:'),
         html.Br(),
         html.Br(),
         
-        html.Table([
+        #html.Table([
         #html.Tr(['species]
-        html.Tr([html.Td(['CO2(aq)= ']), html.Td(id='CO2_species'), html.Td("[umol/l]")   ]  ),
-        html.Tr([html.Td(['HCO3- = ']), html.Td(id='HCO3_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['CO3-2 = ']), html.Td(id='CO3_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['Na+   = ']), html.Td(id='Na_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['H+    = ']), html.Td(id='H_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['OH-  =   ']), html.Td(id='OH_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['NaCO3- =   ']), html.Td(id='NaCO3_species'), html.Td("[umol/l]") ]),
-        html.Tr([html.Td(['table =   ']), html.Td(id='species_dict'), html.Td("[umol/l]") ])
-        ]),
+        #html.Tr([html.Td(['CO2(aq)= ']), html.Td(id='CO2_species'), html.Td("[umol/l]")   ]  ),
+        #html.Tr([html.Td(['HCO3- = ']), html.Td(id='HCO3_species'), html.Td("[umol/l]") ]),
+        #html.Tr([html.Td(['CO3-2 = ']), html.Td(id='CO3_species'), html.Td("[umol/l]") ]),
+        #html.Tr([html.Td(['Na+   = ']), html.Td(id='Na_species'), html.Td("[umol/l]") ]),
+        #html.Tr([html.Td(['H+    = ']), html.Td(id='H_species'), html.Td("[umol/l]") ]),
+        #html.Tr([html.Td(['OH-  =   ']), html.Td(id='OH_species'), html.Td("[umol/l]") ]),
+        #html.Tr([html.Td(['NaCO3- =   ']), html.Td(id='NaCO3_species'), html.Td("[umol/l]") ]),
+        #]),
+
+        html.Div(id="table1", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
         html.Br(),
         html.Br(),
 
@@ -276,14 +272,7 @@ html.Div(id='my-output'),
 # change here
 @app.callback(Output('slider-output-container','children'),
               Output("indicator-graphic", "figure"),
-              Output("CO2_species","children"),
-              Output("HCO3_species","children"),
-              Output("CO3_species","children"),
-              Output("Na_species","children"),
-              Output("H_species","children"),
-              Output("OH_species","children"),
-              Output("NaCO3_species","children"),
-              Output("species_dict","children"),
+              Output("table1","children"),
 
               # new output plot include here 18.10.2022
 
@@ -485,14 +474,35 @@ def update_graph(T,pCO2,alkalinity):
     
     #get the concentrations of all the  species in the system
     # total
-    cCO2=sol.species['CO2']*1e+6
-    cHCO3=sol.species['HCO3-']*1e+6
-    cCO3=sol.species['CO3-2']*1e+6
+
+
     cNa=sol.elements['Na']*1e+6
-    cH=sol.species['H+']*1e+6
-    cOH=sol.species['OH-']*1e+6
-    cNaCO3=sol.species['NaCO3-']*1e+6
-    
+
+    #get concentration of all species
+    df=pd.DataFrame.from_dict(sol.species, orient='index', columns=['concentration [mol/L]'])
+
+    df = df.rename_axis(['species']).reset_index()
+
+    #format = Format(precision=4, scheme=Scheme.fixed)
+
+    cols = [{'name': 'species', 'id': 'species'},
+            {'name':'concentration [mol/L]', 'id':'concentration [mol/L]', 'type': 'numeric',
+             'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}]
+    # the format of each column can be specified
+
+    #dash table object
+
+
+
+    tbl= dash_table.DataTable(df.to_dict('records'),columns =cols,
+
+    style_data = {
+                     'whiteSpace': 'normal',
+                     'height': 'auto',
+                 'minWidth': '100%'},
+    )
+
+    alka_str='You have selected TA={:.2f} [ueq/L]'.format(alk)
     
     #fig.update_layout(height=600, width=800, title_text=r"$\alpha Simulation of Dissolved Carbon Dioxide <br> (assume open system in equilibrium) <br> <br>$")
 
@@ -501,7 +511,11 @@ def update_graph(T,pCO2,alkalinity):
     #the ouputs are arranged in the way like the app.callback function defines them
     # the order has to be followed strictly
     # here i have added c = alkalinity
-    return 'You have selected TA={:.2f} [ueq/L]'.format(alk),fig,"{:.1f}".format(cCO2),"{:.1f}".format(cHCO3),"{:.1f}".format(cCO3),"{:.1f}".format(cNa),"{:.1f}".format(cH),"{:.1f}".format(cOH),"{:.1f}".format(cNaCO3), str(sol.species)
+
+    # use the dash table  for the html output https://dash.plotly.com/datatable
+
+
+    return alka_str,fig,tbl
 
 # here comes the speciation
     

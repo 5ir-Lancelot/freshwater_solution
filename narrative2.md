@@ -2,7 +2,7 @@
 
 _Lukas Rieder_
 
-Here will be my explanaition of the  equations and assumptions from the Book (Steven <Meerson , John Hedges). The squared brackets imply the concentration is meant:
+Here will be my explanaition of the  equations and assumptions from the Book (Steven Emerson , John Hedges). The squared brackets imply the concentration is meant:
 
 $$ c( CO_3^{-2} ) = \[ CO_3^{-2} \]. $$
 
@@ -32,7 +32,7 @@ links in markdown files   the squared brackets have to be typed in this way:  \[
 
 5. Solubility of Gas (Henry's law constant $H$ \[L atm / mol \] ): $$ K_H=\frac{ \[CO_2 \]  }{ H } $$
 
-6. Temperature dependence of Henry's law constant $H(T)$,  $ H\_{ref} $ is the Henry's law constant of CO2 at the reference temperature $ T_\{ref}=298.15 K $ and the Temperature $T$ must be used in Kelvin:  $$ H(T) = H\_{ref} \cdot exp(2400 * (\frac{1}{T} - \frac{1}{T\_{ref}})) $$
+6. Temperature dependence of Henry's law constant $H(T)$,  $ H\_{ref} $ is the Henry's law constant of CO2 at the reference temperature $ T_\{ref}=298.15 K $ and the Temperature $T$ must be used in Kelvin:  $$ H(T) = H\_{ref} \cdot exp(2400 \cdot (\frac{1}{T} - \frac{1}{T\_{ref}})) $$
 
 7. Dissociation Constant of water:  $$ K_w = \[H^{+} \] \[OH^{-} \]  $$
 
