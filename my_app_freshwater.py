@@ -219,7 +219,6 @@ app.layout = html.Div([
         html.Br(),
         dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] :"], className="col-md-4"),
                           dbc.Col(children=[alkalinity_value], className="col-md-8")]),
-        html.Div(id='slider-output-container'),
         html.Br(),
         html.Br(),
         dcc.Graph(id='indicator-graphic',style={'width': '30%', 'display': 'inline-block', 'vertical-align': 'middle'}),
@@ -285,8 +284,7 @@ html.Div(id='my-output'),
 # here inputs and outputs of the application are defined
 
 # change here
-@app.callback(Output('slider-output-container','children'),
-              Output("indicator-graphic", "figure"),
+@app.callback(Output("indicator-graphic", "figure"),
               Output("table1","children"),
 
               # new output plot include here 18.10.2022
