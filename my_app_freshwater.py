@@ -363,7 +363,7 @@ def update_graph(T,pCO2,alkalinity):
     
 
     #
-    x_bar=['DIC',r'$$HCO_{3_{aq}}^{-1}$$','$$CO_{3_{aq}}^{-2}$$','$$CO_{2_{aq}}$$']
+    x_bar=['DIC','HCO3_{aq}','$$CO_{3_{aq}}^{-2}$$','$$CO_{2_{aq}}$$']
     html.Div(["H", html.Sub(2), "H", html.Sup(2)])
     
     # a=sol.total('HCO3')
