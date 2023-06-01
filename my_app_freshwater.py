@@ -217,7 +217,7 @@ app.layout = html.Div([
         dbc.Row(children=[dbc.Col(children=["CO2 partial pressure to equilibrate with [ppm]:"], className="col-md-4"),
                           dbc.Col(children=[CO2_value], className="col-md-8")]),
         html.Br(),
-        dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] log10(TA) :"], className="col-md-4"),
+        dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] :"], className="col-md-4"),
                           dbc.Col(children=[alkalinity_value], className="col-md-8")]),
         html.Div(id='slider-output-container'),
         html.Br(),
@@ -304,8 +304,8 @@ html.Div(id='my-output'),
 def update_graph(T,pCO2,alkalinity):
     
     
-    # because of the log10 scale of the alkalinity slider
-    alk=10**(alkalinity)
+    # removed log scale
+    alk=alkalinity
     
     #convert umol/L concentartion in mmol/L  
     c=alk*1e-3
