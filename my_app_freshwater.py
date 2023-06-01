@@ -517,8 +517,8 @@ def update_graph(T,pCO2,alkalinity):
                  'minWidth': '100%'},
     )
 
-    alka_str='You have selected TA={:.2f} [ueq/L]'.format(alk)
-    
+    #alka_str='You have selected TA={:.2f} [ueq/L]'.format(alk)
+
     #fig.update_layout(height=600, width=800, title_text=r"$\alpha Simulation of Dissolved Carbon Dioxide <br> (assume open system in equilibrium) <br> <br>$")
 
     #it is not possible to add latex in interactive dash
@@ -530,7 +530,7 @@ def update_graph(T,pCO2,alkalinity):
     # use the dash table  for the html output https://dash.plotly.com/datatable
 
 
-    return alka_str,fig,tbl
+    return fig,tbl
 
 # here comes the speciation
     
