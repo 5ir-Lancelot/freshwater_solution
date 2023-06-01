@@ -294,7 +294,7 @@ html.Div(id='my-output'),
               
               [Input("T_input", "value"),
                Input("CO2_input", "value"),
-               Input("'TA_input'", "value")]
+               Input("TA_input", "value")]
               ) 
 
 
