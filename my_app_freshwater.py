@@ -190,6 +190,12 @@ alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0
         tooltip={"placement": "bottom", "always_visible": True},
         updatemode='drag',drag_value=3)
 
+alkalinity_value=dcc.Input(
+        id='TA_input',
+        placeholder='Insert TA value',
+        type='number',
+        value=2500)
+
 
 T_slider2=dcc.Slider(id='T', min=0, max=100, step=0.5, marks={x: str(x)+'°C' for x in range(0,100,10)},
         value=5, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
@@ -211,7 +217,7 @@ app.layout = html.Div([
                           dbc.Col(children=[CO2_value], className="col-md-8")]),
         html.Br(),
         dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] log10(TA) :"], className="col-md-4"),
-                          dbc.Col(children=[alkalinity_slider], className="col-md-8")]),
+                          dbc.Col(children=[alkalinity_value], className="col-md-8")]),
         html.Div(id='slider-output-container'),
         html.Br(),
         html.Br(),
@@ -287,7 +293,7 @@ html.Div(id='my-output'),
               
               [Input("T_input", "value"),
                Input("CO2_input", "value"),
-               Input("alkalinity_input", "value")]
+               Input("'TA_input'", "value")]
               ) 
 
 
