@@ -185,10 +185,11 @@ CO2_value=dcc.Input(
         type='number',
         value=415)
 
-alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0]) ,max=log10(alkalinity_range[1]), step=0.01,
-        marks={x: '{:.0e}'.format(10**x)+' ueq/L' for x in range(0,6,int(1))},value=log10(2500),
-        tooltip={"placement": "bottom", "always_visible": True},
-        updatemode='drag',drag_value=3)
+# alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0]) ,max=log10(alkalinity_range[1]), step=0.01,
+#         marks={x: '{:.0e}'.format(10**x)+' ueq/L' for x in range(0,6,int(1))},value=log10(2500),
+#         tooltip={"placement": "bottom", "always_visible": True},
+#         updatemode='drag',drag_value=3)
+
 
 alkalinity_value=dcc.Input(
         id='TA_input',
