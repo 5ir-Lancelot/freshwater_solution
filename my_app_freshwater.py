@@ -404,7 +404,7 @@ def update_graph(T,pCO2,alkalinity):
     
     
      # create DIC plot from the input data
-    fig.add_trace(go.Scatter(x=DIC_line['pH'], y=DIC_line['DIC'], mode='lines+markers', name='DIC reference 415ppm , 25°C'), row=2, col=1)
+    fig.add_trace(go.Scatter(x=DIC_line['pH'], y=DIC_line['DIC'], mode='lines+markers', name='DIC reference <br> 415ppm , 25°C'), row=2, col=1)
 
 
     #add a single point (pH,DIC) of the real simulation
