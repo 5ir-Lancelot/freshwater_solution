@@ -100,7 +100,8 @@ server = flask.Flask(__name__)
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
                 external_scripts=external_scripts,
-                server=server)
+                server=server,
+                meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}])
 
 # title taht will be visible in the browser tab
 app.title = 'Open Carbonate System Alkalinity Calculations'
