@@ -225,8 +225,7 @@ app.layout = html.Div([
                           dbc.Col(children=[alkalinity_value], className="col-md-8")]),
         html.Br(),
         html.Br(),
-        dcc.Graph(id='indicator-graphic',style={'width': '30%', 'display': 'inline-block', 'vertical-align': 'middle'}),
-        
+        dcc.Graph(id='indicator-graphic',style={'width': '90vh', 'height': '90vh', 'display': 'inline-block', 'vertical-align': 'middle'}),
         
         
         #stuff for another diagram
@@ -354,8 +353,8 @@ def update_graph(T,pCO2,alkalinity):
             title_font_size=29,
             title_font_color="red",
             legend_title_font_color="green",
-            height=1800, # global plot height
-            width='90vh',
+            #height=1800, # global plot height
+            #width='90vh', # dynamic plot width (adjusted to browser window)u
             title_text="Equilibrium Solution for pure Carbonate System",
             #legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
             )
