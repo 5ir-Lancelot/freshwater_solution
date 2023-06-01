@@ -165,7 +165,7 @@ DIC_line=pd.read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_de
 
 #set the ranges for the sliders
 T_range=[0,80]
-CO2_range=[1,10000] 
+CO2_range=[1,300000]
 alkalinity_range=[1,1e+6]
 
 
