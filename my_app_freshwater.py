@@ -174,9 +174,16 @@ alkalinity_range=[1,1e+6]
 T_slider=dcc.Slider(id='T_input', min=T_range[0], max=T_range[1], step=0.5, marks={x: str(x)+'°C' for x in range(T_range[0],T_range[1],10)},
         value=20, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
 
+#
+# CO2_slider=dcc.Slider(id='CO2_input', min=CO2_range[0], max=CO2_range[1], step=1, marks={x: str(x)+'ppm' for x in range(CO2_range[0],CO2_range[1],10000)},
+#         value=415, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
+#
 
-CO2_slider=dcc.Slider(id='CO2_input', min=CO2_range[0], max=CO2_range[1], step=1, marks={x: str(x)+'ppm' for x in range(CO2_range[0],CO2_range[1],10000)},
-        value=415, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
+CO2_value=dcc.Input(
+        id='CO2_input',
+        placeholder='Insert CO2 value',
+        type='number',
+        value=415)
 
 alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0]) ,max=log10(alkalinity_range[1]), step=0.01,
         marks={x: '{:.0e}'.format(10**x)+' ueq/L' for x in range(0,6,int(1))},value=log10(2500),
@@ -201,7 +208,7 @@ app.layout = html.Div([
                           dbc.Col(children=[T_slider], className="col-md-8")]),
         html.Br(),
         dbc.Row(children=[dbc.Col(children=["CO2 partial pressure to equilibrate with [ppm]:"], className="col-md-4"),
-                          dbc.Col(children=[CO2_slider], className="col-md-8")]),
+                          dbc.Col(children=[CO2_value], className="col-md-8")]),
         html.Br(),
         dbc.Row(children=[dbc.Col(children=["Total Alkalinity [ueq/L] log10(TA) :"], className="col-md-4"),
                           dbc.Col(children=[alkalinity_slider], className="col-md-8")]),
