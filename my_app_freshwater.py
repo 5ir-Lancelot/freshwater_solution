@@ -97,6 +97,9 @@ external_scripts = ['https://code.jquery.com/jquery-3.2.1.slim.min.js',
 
 server = flask.Flask(__name__)
 
+# layout options
+# https://dash-bootstrap-components.opensource.faculty.ai/docs/components/layout/
+
 app = dash.Dash(__name__,
                 external_stylesheets=external_stylesheets,
                 external_scripts=external_scripts,
@@ -352,7 +355,7 @@ def update_graph(T,pCO2,alkalinity):
             title_font_color="red",
             legend_title_font_color="green",
             height=1800, # global plot height
-            width=2000,
+            width='90vh',
             title_text="Equilibrium Solution for pure Carbonate System",
             #legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
             )
