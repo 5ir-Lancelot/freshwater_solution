@@ -225,8 +225,8 @@ app.layout = html.Div([
                           dbc.Col(children=[alkalinity_value], className="col-md-8")]),
         html.Br(),
         html.Br(),
-        dcc.Graph(id='indicator-graphic',style={'width': '90vw', 'height': '90vh', 'display': 'inline-block', 'vertical-align': 'middle'}),
-        
+        dcc.Graph(id='indicator-graphic',style={'width': '90vw', 'height': '90vh'}),
+        # , 'display': 'inline-block', 'vertical-align': 'middle'
         
         #stuff for another diagram
 # =============================================================================
