@@ -363,7 +363,7 @@ def update_graph(T,pCO2,alkalinity):
     
 
     #
-    x_bar=['DIC','HCO3_{aq}','CO3_{aq}}^{-2}','CO2_{aq}}']
+    x_bar=['DIC','HCO<sub>3</sub><sup>-</sup><sub>(aq)','CO<sub>3</sub><sup>-2</sup><sub>(aq)','CO<sub>2</sub><sub>(aq)']
     html.Div(["H", html.Sub(2), "H", html.Sup(2)])
     
     # a=sol.total('HCO3')
@@ -454,9 +454,9 @@ def update_graph(T,pCO2,alkalinity):
    
    # input is the array and then it is defined which columns are x and y
    
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name='CO2aq' ),row=3, col=1)
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name='HCO3aq' ),row=3, col=1)
-    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name='CO3aq'),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO2_frac'],  mode='lines+markers',name=x_bar[3] ),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['HCO3_frac'], mode='lines+markers',name=x_bar[1] ),row=3, col=1)
+    fig.add_trace(go.Scatter(x=lines['pH'],y=lines['CO3_frac'], mode='lines+markers',name=x_bar[2]),row=3, col=1)
 
     
     
