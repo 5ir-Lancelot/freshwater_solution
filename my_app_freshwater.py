@@ -174,7 +174,8 @@ alkalinity_range=[1,1e+6]
 T_slider=dcc.Slider(id='T_input', min=T_range[0], max=T_range[1], step=0.5, marks={x: str(x)+'°C' for x in range(T_range[0],T_range[1],10)},
         value=20, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
 
-CO2_slider=dcc.Slider(id='CO2_input', min=CO2_range[0], max=CO2_range[1], step=1, marks={x: str(x)+'ppm' for x in range(CO2_range[0],CO2_range[1],1000)},
+
+CO2_slider=dcc.Slider(id='CO2_input', min=CO2_range[0], max=CO2_range[1], step=1, marks={x: str(x)+'ppm' for x in range(CO2_range[0],CO2_range[1],10000)},
         value=415, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
 
 alkalinity_slider=dcc.Slider(id='alkalinity_input', min=log10(alkalinity_range[0]) ,max=log10(alkalinity_range[1]), step=0.01,
