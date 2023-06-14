@@ -378,8 +378,11 @@ def update_graph(T,pCO2,alkalinity):
     
     # print(solution.species['HCO3-'])
     # everything in umol/l
-    
-    y_bar=[sol.total_element('C', units='mmol')*1000,sol.total('HCO3')*1000,sol.total('CO3')*1000,sol.total('CO2')*1000]
+
+
+    #also add H+ and OH-
+
+    y_bar=[sol.total_element('C', units='mmol')*1000,sol.total('HCO3')*1000,sol.total('CO3')*1000,sol.total('CO2')*1000,-1*sol.species('H+')*1000,sol.species('OH-')*1000]
     
     water_type=['freshwater']  # here one can add freshwater etc if it would be interesting in this case
     
