@@ -402,7 +402,7 @@ def update_graph(T,pCO2,alkalinity):
     fig.update_yaxes(title_text='c [ueq/L]', row=1, col=1)
 
 
-
+    #pls work
     
     # Change the bar mode
     fig.update_layout(barmode='stack')
