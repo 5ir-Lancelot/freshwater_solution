@@ -388,15 +388,19 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_trace(go.Bar(name=x_bar[1], x=water_type, y=[y_bar[1]]),row=1, col=1)
     
     fig.add_trace(go.Bar(name=x_bar[2], x=water_type, y=[y_bar[2]]),row=1, col=1)
-              
-   
+
+
+    #update label of the yaxis
+    fig.update_yaxes(title_text='c [umol/L]', row=1, col=1)
+
+
+
     
     # Change the bar mode
     fig.update_layout(barmode='stack')
     
-    #to see the very big differences I use a logarithmic scale
-    # Update xaxis properties  for just the first plot
-    fig.update_yaxes(title_text='concentration [umol/L]', row=1, col=1)
+
+
     
     # attention range is in log so 10^0  to 10^6
     
