@@ -396,7 +396,7 @@ def update_graph(T,pCO2,alkalinity):
 
 
     #update label of the yaxis
-    fig.update_yaxes(title_text='c [umol/L]', row=1, col=1)
+    fig.update_yaxes(title_text='c [ueq/L]', row=1, col=1)
 
 
 
