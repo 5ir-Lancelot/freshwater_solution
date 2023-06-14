@@ -313,6 +313,7 @@ def update_graph(T,pCO2,alkalinity):
     #convert umol/L concentartion in mmol/L  
     c=alk*1e-3
 
+
     sol=pp.add_solution_simple({'NaHCO3':c},temperature=T) # in Phreeqc default units are mmol/kgw
     
     
@@ -379,10 +380,11 @@ def update_graph(T,pCO2,alkalinity):
     # print(solution.species['HCO3-'])
     # everything in umol/l
 
+    #for species the output is mol
 
     #also add H+ and OH-
 
-    y_bar=[sol.total_element('C', units='mmol')*1000,sol.total('HCO3')*1000,sol.total('CO3')*1000,sol.total('CO2')*1000,-1*sol.species('H+')*1000,sol.species('OH-')*1000]
+    y_bar=[sol.total_element('C', units='mmol')*1000,sol.total('HCO3')*1000,sol.total('CO3')*1000,sol.total('CO2')*1000,sol.species['H+']*1e6,sol.species['OH-']*1e6]
     
     water_type=['freshwater']  # here one can add freshwater etc if it would be interesting in this case
     
@@ -392,8 +394,9 @@ def update_graph(T,pCO2,alkalinity):
     
     fig.add_trace(go.Bar(name=x_bar[2], x=water_type, y=[y_bar[2]]),row=1, col=1)
 
+    fig.add_trace(go.Bar(name=x_bar[4], x=water_type, y=[y_bar[4]]), row=1, col=1)
 
-
+    fig.add_trace(go.Bar(name=x_bar[5], x=water_type, y=[y_bar[5]]), row=1, col=1)
 
     #update label of the yaxis
     fig.update_yaxes(title_text='c [ueq/L]', row=1, col=1)
