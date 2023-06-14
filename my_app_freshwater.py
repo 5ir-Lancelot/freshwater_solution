@@ -444,7 +444,7 @@ def update_graph(T,pCO2,alkalinity):
     #             )
     #         )
 
-    fig.update_yaxes(title_text="concentration [mol/L]",type='log', row=2, col=1)
+    fig.update_yaxes(title_text="concentration C [mol/L]",type='log', row=2, col=1)
 
     #fig.add_trace(go.Bar(name=x_bar[0], x=['DIC'], y=[y_bar[0]]),row=2, col=1)
     #fig.update_yaxes(range=[0,10000],row=2, col=1)
