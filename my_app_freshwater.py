@@ -396,7 +396,7 @@ def update_graph(T,pCO2,alkalinity):
     
     #to see the very big differences I use a logarithmic scale
     # Update xaxis properties  for just the first plot
-    fig.update_yaxes(title_text="concentration [umol/L]", row=1, col=1)
+    fig.update_yaxes(title_text='concentration [umol/L]', row=1, col=1)
     
     # attention range is in log so 10^0  to 10^6
     
