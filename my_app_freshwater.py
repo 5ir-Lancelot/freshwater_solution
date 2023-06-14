@@ -363,7 +363,7 @@ def update_graph(T,pCO2,alkalinity):
     
 
     #
-    x_bar=['DIC','HCO<sub>3</sub><sup>-</sup><sub>(aq)','CO<sub>3</sub><sup>-2</sup><sub>(aq)','CO<sub>2</sub><sub>(aq)']
+    x_bar=['DIC','HCO<sub>3</sub><sup>-</sup><sub>(aq)','CO<sub>3</sub><sup>-2</sup><sub>(aq)','CO<sub>2</sub><sub>(aq)','H<sup>+</sup>','OH<sup>-</sup>']
     html.Div(["H", html.Sub(2), "H", html.Sup(2)])
     
     # a=sol.total('HCO3')
@@ -391,6 +391,8 @@ def update_graph(T,pCO2,alkalinity):
     fig.add_trace(go.Bar(name=x_bar[1], x=water_type, y=[y_bar[1]]),row=1, col=1)
     
     fig.add_trace(go.Bar(name=x_bar[2], x=water_type, y=[y_bar[2]]),row=1, col=1)
+
+
 
 
     #update label of the yaxis
