@@ -175,8 +175,20 @@ alkalinity_range=[1,1e+6]
 #set some constants
 
 M_C=12.011 #g/mol
-
-
+M_CH4=16.04 #g/mol
+M_CO2=44.01 #g/mol
+M_CO3=60.01 #g/mol
+M_H=1.00784 #g/mol
+M_H2=M_H*2 # g/mol
+M_H2O=18.01528 #g/mol
+M_HCO3=61.0168 # g/mol
+M_Na=22.98976928 # g/mol
+M_NaCO3=M_CO3+M_Na # g/mol
+M_NaHCO3=M_HCO3+M_Na # g/mol
+M_OH=17.008 # g/mol
+M_NaOH=M_Na+M_OH # g/mol
+M_O=15,999 # g/mol
+M_O2=M_O*2
 
 T_slider=dcc.Slider(id='T_input', min=T_range[0], max=T_range[1], step=0.5, marks={x: str(x)+'°C' for x in range(T_range[0],T_range[1],10)},
         value=20, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
@@ -515,6 +527,8 @@ def update_graph(T,pCO2,alkalinity):
     df=pd.DataFrame.from_dict(sol.species, orient='index', columns=['concentration [mol/L]'])
 
     df = df.rename_axis(['species']).reset_index()
+
+    df['concentration [mg/L]']=sol.species()
 
     #format = Format(precision=4, scheme=Scheme.fixed)
 
