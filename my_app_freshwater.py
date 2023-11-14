@@ -172,6 +172,9 @@ T_range=[0,80]
 CO2_range=[1,300000]
 alkalinity_range=[1,1e+6]
 
+#set some constants
+
+M_C=12.011 #g/mol
 
 
 
@@ -438,7 +441,7 @@ def update_graph(T,pCO2,alkalinity):
 
     # make annotation at the value slighly shiftet in the
     fig.add_annotation(x=pH-1, y=DIC,
-                       text="pH={:.2f} <br> DIC={:.6f} mol/l".format(pH, DIC),
+                       text="pH={:.2f} <br> DIC={:.6f} mol/l <br> DIC={:.6f} g/l <br> DIC= {:.6f} ppm".format(pH, DIC, DIC*M_C,DIC*M_C*1000),
                        showarrow=False,
                        yshift=1, row=2, col=1)
 
@@ -517,7 +520,10 @@ def update_graph(T,pCO2,alkalinity):
 
     cols = [{'name': 'species', 'id': 'species'},
             {'name':'concentration [mol/L]', 'id':'concentration [mol/L]', 'type': 'numeric',
-             'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}]
+             'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}
+            #,{'name': 'concentration [mg/L]', 'id': 'concentration [mg/L]', 'type': 'numeric',
+             #'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}
+            ]
     # the format of each column can be specified
 
     #dash table object
