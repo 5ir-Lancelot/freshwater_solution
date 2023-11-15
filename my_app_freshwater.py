@@ -188,7 +188,7 @@ M_NaHCO3=M_HCO3+M_Na # g/mol
 M_OH=17.008 # g/mol
 M_NaOH=M_Na+M_OH # g/mol
 M_O=15,999 # g/mol
-M_O2=M_O*2
+M_O2=M_O*2 # g/mol
 
 T_slider=dcc.Slider(id='T_input', min=T_range[0], max=T_range[1], step=0.5, marks={x: str(x)+'°C' for x in range(T_range[0],T_range[1],10)},
         value=20, tooltip={"placement": "bottom", "always_visible": True}, updatemode='drag')
@@ -534,10 +534,10 @@ def update_graph(T,pCO2,alkalinity):
 
     cols = [{'name': 'species', 'id': 'species'},
             {'name':'concentration [mol/L]', 'id':'concentration [mol/L]', 'type': 'numeric',
-             'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}
+             'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}]
             #,{'name': 'concentration [mg/L]', 'id': 'concentration [mg/L]', 'type': 'numeric',
-             #'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}
-            ]
+             #'format': dash_table.Format.Format(precision=4, scheme=dash_table.Format.Scheme.exponent)}]
+
     # the format of each column can be specified
 
     #dash table object
