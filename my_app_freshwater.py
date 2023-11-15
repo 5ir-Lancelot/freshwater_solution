@@ -528,7 +528,7 @@ def update_graph(T,pCO2,alkalinity):
 
     df = df.rename_axis(['species']).reset_index()
 
-    df['concentration [mg/L]']=sol.species()
+    #df['concentration [mg/L]']=sol.species()
 
     #format = Format(precision=4, scheme=Scheme.fixed)
 
