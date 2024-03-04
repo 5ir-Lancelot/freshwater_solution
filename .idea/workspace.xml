@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="edit requirements">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Lukas Rieder &lt;49588037+5ir-lancelot@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -210,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709576063691</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break">
+      <option name="closed" value="true" />
+      <created>1709590690642</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709590690642</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,6 +236,8 @@
     <MESSAGE value="new code new website for BAM" />
     <MESSAGE value="super simple requirements file&#10;generated with Sync Python Requirements." />
     <MESSAGE value="edit requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit requirements" />
+    <MESSAGE value="added Werkzeug==2.2.2 to requirements" />
+    <MESSAGE value="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
   </component>
 </project>
