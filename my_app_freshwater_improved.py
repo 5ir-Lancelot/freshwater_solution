@@ -14,7 +14,6 @@ Thus, you can expect a web server development, support for Google App Engine as 
 my app should be tidied up and inspired by Chris one
 
 path to open 
-cd C:\Daten\Transfer\Karriere\nebenjob_conductivity\python_simulation
 
 
 then run it from the console anaconde prompt
