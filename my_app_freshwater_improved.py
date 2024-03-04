@@ -493,6 +493,7 @@ def update_graph(rows, columns):
 
 
     #
+    #
 
     # calculate DIC
 
