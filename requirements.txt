@@ -7,3 +7,4 @@ numpy==1.26.4
 flask~=2.0.3
 plotly~=5.3.1
 gunicorn~=20.1.0
+Werkzeug==2.2.2
