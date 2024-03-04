@@ -1,1 +1,1 @@
-web: gunicorn my_app_freshwater:server
+web: gunicorn my_app_freshwater_improved:server
