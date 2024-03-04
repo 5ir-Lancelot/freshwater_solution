@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="edit requirements">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;searchQuery&quot;: &quot;bam&quot;,
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;5ir-Lancelot&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;searchQuery&quot;: &quot;bam&quot;,
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;5ir-Lancelot&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1d46aa32-e90e-432c-a69b-eb7c6eb7871b" />
+        <option name="url" value="https://github.com/5ir-Lancelot/freshwater_solution.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2YAgKJKptIgAQQlxGNihhqPYiDn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/u301072/PycharmProjects/freshwater_solution",
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.my_app_freshwater_improved">
+    <configuration name="my_app_freshwater" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="freshwater_solution" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_app_freshwater.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_app_freshwater_improved" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="freshwater_solution" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_app_freshwater_improved.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.my_app_freshwater" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="" />
+      <created>1699973733221</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699973733221</updated>
+    </task>
+    <task id="LOCAL-00001" summary="new DIC units added">
+      <option name="closed" value="true" />
+      <created>1699978081839</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699978081839</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new molar masses implemented &#10;work in progress">
+      <option name="closed" value="true" />
+      <created>1699979385596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699979385596</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new molar masses implemented &#10;work in progress fix 2">
+      <option name="closed" value="true" />
+      <created>1700040057665</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700040057665</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new molar masses implemented &#10;work in progress fix 3">
+      <option name="closed" value="true" />
+      <created>1700040161487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700040161487</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new species table added">
+      <option name="closed" value="true" />
+      <created>1700059528582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700059528582</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new code new website for BAM">
+      <option name="closed" value="true" />
+      <created>1709569481922</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709569481923</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new code new website for BAM">
+      <option name="closed" value="true" />
+      <created>1709570662245</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709570662245</updated>
+    </task>
+    <task id="LOCAL-00008" summary="super simple requirements file&#10;generated with Sync Python Requirements.">
+      <option name="closed" value="true" />
+      <created>1709571140930</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709571140930</updated>
+    </task>
+    <task id="LOCAL-00009" summary="super simple requirements file&#10;generated with Sync Python Requirements.">
+      <option name="closed" value="true" />
+      <created>1709573211481</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709573211481</updated>
+    </task>
+    <task id="LOCAL-00010" summary="edit requirements">
+      <option name="closed" value="true" />
+      <created>1709574907108</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709574907108</updated>
+    </task>
+    <task id="LOCAL-00011" summary="edit requirements">
+      <option name="closed" value="true" />
+      <created>1709576063691</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709576063691</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/carbonate-system-freshwater" />
+    </ignored-roots>
+    <MESSAGE value="new DIC units added" />
+    <MESSAGE value="new molar masses implemented &#10;work in progress" />
+    <MESSAGE value="new molar masses implemented &#10;work in progress fix 2" />
+    <MESSAGE value="new molar masses implemented &#10;work in progress fix 3" />
+    <MESSAGE value="new species table added" />
+    <MESSAGE value="new code new website for BAM" />
+    <MESSAGE value="super simple requirements file&#10;generated with Sync Python Requirements." />
+    <MESSAGE value="edit requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit requirements" />
+  </component>
+</project>
