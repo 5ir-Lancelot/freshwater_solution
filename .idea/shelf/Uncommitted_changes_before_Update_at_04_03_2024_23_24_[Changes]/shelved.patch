@@ -1,0 +1,80 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"PyCharmProfessionalAdvertiser\">\r\n    <option name=\"shown\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 772b7511f21a50696c71f4e43922ba589015d881)
++++ b/.idea/misc.xml	(date 1709591033344)
+@@ -1,5 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.10 (freshwater_solution)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (freshwater_solution)" project-jdk-type="Python SDK" />
+   <component name="PyCharmProfessionalAdvertiser">
+     <option name="shown" value="true" />
+   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"398361e1-7b9b-415c-951a-4d5f71902af2\" name=\"Changes\" comment=\"edit requirements\">\r\n      <change beforePath=\"$PROJECT_DIR$/requirements.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/requirements.txt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;history&quot;: [\r\n    {\r\n      &quot;searchQuery&quot;: &quot;bam&quot;,\r\n      &quot;state&quot;: &quot;OPEN&quot;,\r\n      &quot;assignee&quot;: &quot;5ir-Lancelot&quot;\r\n    }\r\n  ],\r\n  &quot;lastFilter&quot;: {\r\n    &quot;searchQuery&quot;: &quot;bam&quot;,\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;5ir-Lancelot&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"1d46aa32-e90e-432c-a69b-eb7c6eb7871b\" />\r\n        <option name=\"url\" value=\"https://github.com/5ir-Lancelot/freshwater_solution.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2YAgKJKptIgAQQlxGNihhqPYiDn\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"last_opened_file_path\": \"C:/Users/u301072/PycharmProjects/freshwater_solution\",\r\n    \"settings.editor.selected.configurable\": \"project.propVCSSupport.CommitDialog\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\u301072\\PycharmProjects\\freshwater_solution\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Python.my_app_freshwater_improved\">\r\n    <configuration name=\"my_app_freshwater\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"freshwater_solution\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/my_app_freshwater.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"my_app_freshwater_improved\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"freshwater_solution\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"SDK_NAME\" value=\"Python 3.9\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/my_app_freshwater_improved.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Python.my_app_freshwater\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"398361e1-7b9b-415c-951a-4d5f71902af2\" name=\"Changes\" comment=\"\" />\r\n      <created>1699973733221</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1699973733221</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"new DIC units added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699978081839</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699978081839</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"new molar masses implemented &#10;work in progress\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1699979385596</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1699979385596</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"new molar masses implemented &#10;work in progress fix 2\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700040057665</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700040057665</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"new molar masses implemented &#10;work in progress fix 3\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700040161487</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700040161487</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"new species table added\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1700059528582</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1700059528582</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"new code new website for BAM\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709569481922</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709569481923</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"new code new website for BAM\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709570662245</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709570662245</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"super simple requirements file&#10;generated with Sync Python Requirements.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709571140930</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709571140930</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"super simple requirements file&#10;generated with Sync Python Requirements.\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709573211481</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709573211481</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"edit requirements\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709574907108</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709574907108</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"edit requirements\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1709576063691</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1709576063691</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/carbonate-system-freshwater\" />\r\n    </ignored-roots>\r\n    <MESSAGE value=\"new DIC units added\" />\r\n    <MESSAGE value=\"new molar masses implemented &#10;work in progress\" />\r\n    <MESSAGE value=\"new molar masses implemented &#10;work in progress fix 2\" />\r\n    <MESSAGE value=\"new molar masses implemented &#10;work in progress fix 3\" />\r\n    <MESSAGE value=\"new species table added\" />\r\n    <MESSAGE value=\"new code new website for BAM\" />\r\n    <MESSAGE value=\"super simple requirements file&#10;generated with Sync Python Requirements.\" />\r\n    <MESSAGE value=\"edit requirements\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"edit requirements\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 772b7511f21a50696c71f4e43922ba589015d881)
++++ b/.idea/workspace.xml	(date 1709591033268)
+@@ -4,15 +4,18 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="edit requirements">
+-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+-    </list>
++    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+   <component name="Git.Settings">
++    <option name="PREVIOUS_COMMIT_AUTHORS">
++      <list>
++        <option value="Lukas Rieder &lt;49588037+5ir-lancelot@users.noreply.github.com&gt;" />
++      </list>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -210,7 +213,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1709576063691</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break">
++      <option name="closed" value="true" />
++      <created>1709590690642</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1709590690642</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+@@ -225,6 +236,8 @@
+     <MESSAGE value="new code new website for BAM" />
+     <MESSAGE value="super simple requirements file&#10;generated with Sync Python Requirements." />
+     <MESSAGE value="edit requirements" />
+-    <option name="LAST_COMMIT_MESSAGE" value="edit requirements" />
++    <MESSAGE value="added Werkzeug==2.2.2 to requirements" />
++    <MESSAGE value="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
++    <option name="LAST_COMMIT_MESSAGE" value="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
+   </component>
+ </project>
+\ No newline at end of file
