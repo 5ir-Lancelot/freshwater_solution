@@ -52,6 +52,12 @@ https://www.youtube.com/watch?v=b-M2KQ6_bM4
     
 10. log in  command in Pycharm
     heroku login
+
+update to generate a simple requirements.txt file that just contains what was used in the given project
+
+menue -> tools -> Synch Python requirements
+
+In the procfile the python file with the real app that should be used need to be specified.
     
 
     
