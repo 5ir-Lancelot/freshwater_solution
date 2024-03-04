@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "./my_app_freshwater.py",
+            "src": "./my_app_freshwater_improved.py",
             "use": "@vercel/python"
         }
     ],
