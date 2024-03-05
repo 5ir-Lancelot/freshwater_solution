@@ -380,18 +380,6 @@ app.layout = html.Div([
     ]),
     mathjax_script
 ])
-    
-"""  
-# added stuff could be dagerous
-html.H6("Change the value in the text box to see callbacks in action!"),
-html.Div([
-"Input: ",
-dcc.Input(id='my-input', value='initial value', type='text'), 
-        
-]),
-html.Br(),
-html.Div(id='my-output'),
-"""  
 
 
 # INTERACTION
@@ -614,34 +602,8 @@ def update_graph(rows, columns):
 
     return tbl1, tbl2,tbl3
 
-# here comes the speciation
+
     
-'''
-
-@app.callback(Output("numbers",'children'),
-              Input("x","value"))
-
-def update_result(x, y):
-    return "The muver of moles of HCO§ is: {}".format(x)
-
-'''
-
-
-# another app callback for the next plot therefore I will use a single temprerature slider
-'''
-@app.callback(Output("temperature", "figure"),
-              Input("T", "value"),
-              )
-def third_callback(T):
-    
-    x = np.arange(10)
-
-    fig = go.Figure(data=go.Scatter(x=x, y=T*x**2))
-    
-    return fig
-
-'''
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
