@@ -140,9 +140,11 @@ server=app.server
 
 filepath = os.path.split(os.path.realpath(__file__))[0]
 
-narrative_text = open(os.path.join(filepath, "narrative2_improved.md"), "r").read()
-refs_text = open(os.path.join(filepath, "references2.md"), "r").read()
+narrative_text = open(os.path.join(filepath, "narrative_improved.md"), "r").read()
+refs_text = open(os.path.join(filepath, "references.md"), "r").read()
 some_text = open(os.path.join(filepath, "sometext.md"), "r").read()
+input_text=open(os.path.join(filepath, "Textbox_input.md"), "r").read()
+output_text=open(os.path.join(filepath, "Textbox_output.md"), "r").read()
 
 mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
 
@@ -201,12 +203,15 @@ M_O2=M_O*2 # g/mol
 
 
 
+
 M_Mg=24.305 # g/mol
 M_Ca=40.078  # g/mol
+M_K=39.0983 #g/mol
 M_CaCO3=M_Ca+M_C+3*M_O
 M_MgCO3=M_Mg+M_C+3*M_O
 M_MgHCO3=M_Mg+M_HCO3
 M_CaHCO3=M_Ca+M_HCO3
+
 
 M_CaOH=M_Ca+M_OH
 
@@ -222,19 +227,28 @@ conv={'CH4': M_CH4, 'CO2': M_CO2,
       'Ca+2':M_Ca,'CaCO3':M_CaCO3,
       'Mg+2':M_Mg,'MgCO3':M_MgCO3,
       'MgHCO3+':M_MgHCO3,'MgOH+':M_MgOH,
-      'CaHCO3+':M_CaHCO3,'CaOH+':M_CaOH}
+      'CaHCO3+':M_CaHCO3,'CaOH+':M_CaOH,
+      'K+':M_K}
 
 
 #put a whole table here for the input
 
 
+#set global strings for the variables
 
-#variables for the data table
+TA_s='TA [ueq/kgw]'
+T_s='water T [°C]'
+pCO2_s='air pCO2 [ppm]'
+Na_s='Na+ [umol/kgw]'
+Mg_s='Mg+2 [umol/kgw]'
+Ca_s='Ca+2 [umol/kgw]'
+K_s='K+ [umol/kgw]'
 
+
+#variables to use for the data input table
 params = [
-    'TA [ueq/kgw]', 'water T [°C]', 'air pCO2 [ppm]', 'Na+',
-    'Mg+2', 'Ca+2', ''
-]
+    TA_s, T_s, pCO2_s, Na_s,
+    Mg_s, Ca_s,K_s]
 
 # APP LAYOUT
 # ==========
@@ -244,41 +258,105 @@ app.layout = html.Div([
         dcc.Markdown(narrative_text, dangerously_allow_html=True),
 
         #input whole editable data table
-
+        html.Br(),
+        html.H2('Input table :'),
+        html.B('Enter all the observed parameters here in this table. Default is starting with 0 for everything (closed system with pure water):'),
+        html.Br(),
+        html.Br(),
+        dcc.Markdown(input_text, dangerously_allow_html=True),
+        html.Br(),
         dash_table.DataTable(
                 id='table-editing-simple',
                 columns=(
-                    [{'id': 'Model', 'name': 'Model'}] +
+                    [{'id': 'Model', 'name': 'sample'}] +
                     [{'id': p, 'name': p} for p in params]
                 ),
                 data=[
                     dict(Model=i, **{param: 0 for param in params})
                     for i in range(1, 2)
                 ],
-                editable=True
+                editable=True,
+                #make some color code for the columns with zero
+                style_data_conditional=[
+                        {
+                            'if': {
+                                'filter_query': '{'+TA_s+'}=0',
+                                'column_id': TA_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{'+T_s+'}=0',
+                                'column_id': T_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{'+Na_s+'}=0',
+                                'column_id': Na_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{'+Mg_s+'}=0',
+                                'column_id': Mg_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{'+Ca_s+'}=0',
+                                'column_id': Ca_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{' + Ca_s + '}=0',
+                                'column_id': Ca_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{' + pCO2_s + '}=0',
+                                'column_id': pCO2_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        },
+                        {
+                            'if': {
+                                'filter_query': '{' + K_s + '}=0',
+                                'column_id': K_s
+                            },
+                            'backgroundColor': 'tomato',
+                            'color': 'black'
+                        }
+
+                    ]
             ),
 
-
+        html.H2('Output tables :'),
         html.Br(),
+
         html.B('This is the resulting speciation after the water is in equilibrium with the atmosphere:'),
         html.Br(),
         html.Br(),
-        
-        #html.Table([
-        #html.Tr(['species]
-        #html.Tr([html.Td(['CO2(aq)= ']), html.Td(id='CO2_species'), html.Td("[umol/l]")   ]  ),
-        #html.Tr([html.Td(['HCO3- = ']), html.Td(id='HCO3_species'), html.Td("[umol/l]") ]),
-        #html.Tr([html.Td(['CO3-2 = ']), html.Td(id='CO3_species'), html.Td("[umol/l]") ]),
-        #html.Tr([html.Td(['Na+   = ']), html.Td(id='Na_species'), html.Td("[umol/l]") ]),
-        #html.Tr([html.Td(['H+    = ']), html.Td(id='H_species'), html.Td("[umol/l]") ]),
-        #html.Tr([html.Td(['OH-  =   ']), html.Td(id='OH_species'), html.Td("[umol/l]") ]),
-        #html.Tr([html.Td(['NaCO3- =   ']), html.Td(id='NaCO3_species'), html.Td("[umol/l]") ]),
-        #]),
-
         html.Div(id="table1", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
         html.Br(),
         html.Br(),
-        html.B('Those are the satutrration index of minerals that can precipitate:'),
+        html.B('Those are the satutration index of minerals that can precipitate:'),
+        html.Plaintext('When the water sample reaches oversaturation the ceratin mineral will be highlighted in red.'),
         html.Br(),
         html.Br(),
         html.Div(id="table2", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
@@ -357,17 +435,19 @@ def update_graph(rows, columns):
 
     for k in df.index:
 
+        # TA_s, T_s, pCO2_s, Na_s,
+        #     Mg_s, Ca_s]
         sol = pp.add_solution({'units': 'umol/kgw',
                                #'pH': pH,
                                'density': 1.000,
-                               'temp': df.loc[k,'water T [°C]'],
+                               'temp': df.loc[k,T_s],
                                # include the cations
                                #'Li': np.nan_to_num(cat[('IC_Ca', '[umol_l]')]),
-                               'Na': np.nan_to_num(df.loc[k,'Na+']),
+                               'Na': np.nan_to_num(df.loc[k,Na_s]),
                                #'N(-3)': np.nan_to_num(cat[('IC_NH4', '[umol_l]')]),  # N(-3) stands for NH4
-                               #'K': np.nan_to_num(cat[('IC_K', '[umol_l]')]),
-                               'Ca': np.nan_to_num(df.loc[k,'Ca+2']),
-                               'Mg': np.nan_to_num(df.loc[k,'Mg+2']),
+                               'K': np.nan_to_num(df.loc[k,K_s]),
+                               'Ca': np.nan_to_num(df.loc[k,Ca_s]),
+                               'Mg': np.nan_to_num(df.loc[k,Mg_s]),
                                # include the anions
                                #'F': np.nan_to_num(an[('IC_F', '[umol_l]')]),
                                #'Cl': np.nan_to_num(an[('IC_Cl', '[umol_l]')]),
@@ -379,11 +459,11 @@ def update_graph(rows, columns):
                                # test different notation
                                #'C(4)': DIC,
                                #enter the alklainity (as CO3)
-                               'Alkalinity':np.nan_to_num(df.loc[k,'TA [ueq/kgw]']),
+                               'Alkalinity':np.nan_to_num(df.loc[k,TA_s]),
                                })
 
         #closed system case no CO2 interaction
-        if np.nan_to_num(df.loc[k,'air pCO2 [ppm]'])<=0.0:
+        if np.nan_to_num(df.loc[k,pCO2_s])<=0.0:
             # pH of the solution
             pH = sol.pH
 
@@ -397,7 +477,7 @@ def update_graph(rows, columns):
 
         else:
             # the pressure default unit is atm so I convert the ppm to atm
-            p=df.loc[k,'air pCO2 [ppm]']*1e-6
+            p=df.loc[k,pCO2_s]*1e-6
 
             # the function equilizie needs the phreeqc input the partial pressure in negative log10 scale
 

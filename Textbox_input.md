@@ -1,0 +1,2 @@
+All fields stay red when beeing zero. Once you put a number different from zero the fields turn to white again. 
+The total alkaloinity (TA) is for the calculation asssumed to be pure carbonate alkalinity
