@@ -71,6 +71,10 @@ improved version allowing for more input variables (more water parameters)
 put a table as input
 
 
+very important to run a specific file as the main script 
+the run command need to be changed on the digitalocean website
+
+go to app -> settings -> commands -> run command -> edit
 """
 
 
