@@ -46,5 +46,34 @@ However the model you find here is not calculated with the simplification of alk
 The current global mean level of atmospheric partial pressure of CO2 gas you can get from [Mauna Loa Observatory](https://gml.noaa.gov/ccgg/trends/global.html).
 
 
+# Ion Activity Product (IAP) and Saturation Index (SI)
+
+<!--- when using curly braces the underscores also need to be escaped with \
+-->
+
+The law of mass action in (1) determines the activities at the state of equilibrium, $ \{A\}\_{eq} $ and $ \{B\}\_{eq}$:
+
+(1) $$ K\_{sp} \\,=\\, \\dfrac{\\{A\\}^{a}\\{B\\}^{b}}{\\{A\_{a}B\_{b}\\}}
+\\,=\\, \\{A\\}^{a}\\{B\\}^{b} $$
+
+
+(2) 	chem equilibrium: 	
+$$ K_{sp} = \{A\}\_{eq}^{a} \{B\}\_{eq}^{b} $$
+
+However, a real solution may not be in the state of equilibrium. The non-equilibrium state is 
+described by the ion activity product (IAP). It has the same math form as the equilibrium constant $K_{sp}$,
+but involves the actual activities, $ \{A\}\_{actual} $ and $ \{B\}\_{actual}$:
+
+(3) 	non-equilibrium:  $$ IAP = \{A\}\_{actual}^{a} \{B\}\_{actual}^{b} $$
+
+The decadic logarithm of the ratio of IAP to Ksp defines of the saturation index:
+(4) 	saturation index: 	SI
+
+The saturation index is a useful quantity to determine whether the water is saturated,
+undersaturated, or supersaturated with respect to the given mineral:
+
+- SI = 0 	IAP = $K_{sp}$ saturated  (in chem equilibrium)
+- SI < 0 	IAP < $K_{sp}$ undersaturated
+- SI > 0 	IAP > $K_{sp}$ supersaturated
 
 

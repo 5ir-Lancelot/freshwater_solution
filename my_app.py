@@ -355,7 +355,7 @@ app.layout = html.Div([
         html.Div(id="table1", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
         html.Br(),
         html.Br(),
-        html.B('Those are the satutration index of minerals that can precipitate:'),
+        html.B('Those are the satutration indices of minerals that can precipitate:'),
         html.Plaintext('When the water sample reaches oversaturation the ceratin mineral will be highlighted in red.'),
         html.Br(),
         html.Br(),
@@ -536,7 +536,7 @@ def update_graph(rows, columns):
 
     #output the saturation index table
 
-    df_phases=pd.DataFrame.from_dict(sol.phases, orient='index', columns=['saturation index'])
+    df_phases=pd.DataFrame.from_dict(sol.phases, orient='index', columns=['saturation index (SI)'])
 
     df_phases = df_phases.rename_axis(['mineral']).reset_index()
     # get SI of the phases
@@ -563,8 +563,8 @@ def update_graph(rows, columns):
 
             {
                 'if': {
-                    'filter_query': '{saturation index} >0',
-                    'column_id': 'saturation index'
+                    'filter_query': '{saturation index (SI)} >0',
+                    'column_id': 'saturation index (SI)'
                 },
                 'backgroundColor': 'tomato',
                 'color': 'white'

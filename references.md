@@ -10,6 +10,8 @@ Phreeqpython https://github.com/Vitens/phreeqpython
 
 aqion https://www.aqion.de/
 
+aqion saturation index of minerals https://www.aqion.de/site/168
+
 
 
 
