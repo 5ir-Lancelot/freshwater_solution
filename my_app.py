@@ -149,12 +149,9 @@ some_text = open(os.path.join(filepath, "sometext.md"), "r").read()
 input_text=open(os.path.join(filepath, "Textbox_input.md"), "r").read()
 output_text=open(os.path.join(filepath, "Textbox_output.md"), "r").read()
 
-#mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
 
-#newe mathjax import
 # mathjax is the program translating the Latex MathML with Javascript to generate html to be displayed in the browser
 # this path loads automatically the latest version
-mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js")
 
 
 
@@ -378,7 +375,6 @@ app.layout = html.Div([
         
         
     ]),
-    #mathjax_script
 ])
 
 

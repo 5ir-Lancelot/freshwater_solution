@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="simpler">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="improved Mathjax text , simpler main file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/narrative_improved.md" beforeDir="false" afterPath="$PROJECT_DIR$/narrative_improved.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sometext.md" beforeDir="false" afterPath="$PROJECT_DIR$/sometext.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709645957515</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="improved Mathjax text , simpler main file">
+      <option name="closed" value="true" />
+      <created>1709742693237</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709742693238</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -408,6 +413,7 @@
     <MESSAGE value="better look, new variable names, formatted cells" />
     <MESSAGE value="improved text, imporved putput, improved structure, tidied up" />
     <MESSAGE value="simpler" />
-    <option name="LAST_COMMIT_MESSAGE" value="simpler" />
+    <MESSAGE value="improved Mathjax text , simpler main file" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved Mathjax text , simpler main file" />
   </component>
 </project>
