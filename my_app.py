@@ -377,7 +377,7 @@ app.layout = html.Div([
     ]),
 ])
 
-
+#
 # INTERACTION
 # ===========
 # here inputs and outputs of the application are defined
