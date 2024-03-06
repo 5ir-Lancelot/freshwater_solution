@@ -140,42 +140,39 @@ server=app.server
 
 filepath = os.path.split(os.path.realpath(__file__))[0]
 
+# the "r" refers to read mode
+# it need tro be a  raw string  so that the markdown text is properly loaded with all the backslashes
+
 narrative_text = open(os.path.join(filepath, "narrative_improved.md"), "r").read()
 refs_text = open(os.path.join(filepath, "references.md"), "r").read()
 some_text = open(os.path.join(filepath, "sometext.md"), "r").read()
 input_text=open(os.path.join(filepath, "Textbox_input.md"), "r").read()
 output_text=open(os.path.join(filepath, "Textbox_output.md"), "r").read()
 
-mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
+#mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
+
+#newe mathjax import
+# mathjax is the program translating the Latex MathML with Javascript to generate html to be displayed in the browser
+# this path loads automatically the latest version
+mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js")
 
 
-app.index_string = '''
-<!DOCTYPE html>
-<html>
-    <head>
-        {%metas%}
-        <title>{%title%}</title>
-        {%favicon%}
-        {%css%}
-    </head>
-    <body>
-        {%app_entry%}
-        <footer>
-            {%config%}
-            {%scripts%}
-            <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                tex2jax: {
-                inlineMath: [ ['$','$'],],
-                processEscapes: true
-                }
-            });
-            </script>
-            {%renderer%}
-        </footer>
-    </body>
-</html>
-'''
+
+# loading and configuring mathjax
+#https://docs.mathjax.org/en/v2.7-latest/configuration.html
+
+#general style of the app
+
+# how this app.index_string works https://dash.plotly.com/external-resources
+# HTML string is customizable but does not need to be customized
+
+#standard app.index_string
+
+# no need to put it just use deault settings
+
+
+
+
 
 # COMPONENTS
 # ==========
@@ -253,9 +250,12 @@ params = [
 # APP LAYOUT
 # ==========
 
+
+# changed mathjax=True
+
 app.layout = html.Div([
     dbc.Container(children=[
-        dcc.Markdown(narrative_text, dangerously_allow_html=True),
+        dcc.Markdown(narrative_text, mathjax=True),
 
         #input whole editable data table
         html.Br(),
@@ -263,7 +263,7 @@ app.layout = html.Div([
         html.B('Enter all the observed parameters here in this table. Default is starting with 0 for everything (closed system with pure water):'),
         html.Br(),
         html.Br(),
-        dcc.Markdown(input_text, dangerously_allow_html=True),
+        dcc.Markdown(input_text,mathjax=True),
         html.Br(),
         dash_table.DataTable(
                 id='table-editing-simple',
@@ -366,11 +366,11 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.Div(id="table3", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
-        dcc.Markdown(some_text, dangerously_allow_html=True),
+        dcc.Markdown(some_text,mathjax=True),
         
         
         
-        dcc.Markdown(refs_text, dangerously_allow_html=True),
+        dcc.Markdown(refs_text,mathjax=True),
         html.Br(),
         html.Br(),
         html.Br(),
@@ -378,7 +378,7 @@ app.layout = html.Div([
         
         
     ]),
-    mathjax_script
+    #mathjax_script
 ])
 
 

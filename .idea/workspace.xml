@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="better look, new variable names, formatted cells">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="simpler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textbox_output.md" beforeDir="false" afterPath="$PROJECT_DIR$/Textbox_output.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/narrative_improved.md" beforeDir="false" afterPath="$PROJECT_DIR$/narrative_improved.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references.md" beforeDir="false" afterPath="$PROJECT_DIR$/references.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sometext.md" beforeDir="false" afterPath="$PROJECT_DIR$/sometext.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +353,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709640358768</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="improved text, imporved putput, improved structure, tidied up">
+      <option name="closed" value="true" />
+      <created>1709645883152</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709645883152</updated>
+    </task>
+    <task id="LOCAL-00029" summary="simpler">
+      <option name="closed" value="true" />
+      <created>1709645957515</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709645957515</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,6 +406,8 @@
     <MESSAGE value="rename the improved main file" />
     <MESSAGE value="new commands" />
     <MESSAGE value="better look, new variable names, formatted cells" />
-    <option name="LAST_COMMIT_MESSAGE" value="better look, new variable names, formatted cells" />
+    <MESSAGE value="improved text, imporved putput, improved structure, tidied up" />
+    <MESSAGE value="simpler" />
+    <option name="LAST_COMMIT_MESSAGE" value="simpler" />
   </component>
 </project>
