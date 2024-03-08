@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="improved Mathjax text , simpler main file">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="simpler , removed unecessary items">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -374,7 +374,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709742693238</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="simpler , removed unecessary items">
+      <option name="closed" value="true" />
+      <created>1709746856612</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709746856612</updated>
+    </task>
+    <task id="LOCAL-00032" summary="simpler , removed unecessary items">
+      <option name="closed" value="true" />
+      <created>1709746906719</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1709746906719</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -414,6 +430,7 @@
     <MESSAGE value="improved text, imporved putput, improved structure, tidied up" />
     <MESSAGE value="simpler" />
     <MESSAGE value="improved Mathjax text , simpler main file" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved Mathjax text , simpler main file" />
+    <MESSAGE value="simpler , removed unecessary items" />
+    <option name="LAST_COMMIT_MESSAGE" value="simpler , removed unecessary items" />
   </component>
 </project>

@@ -352,8 +352,8 @@ app.layout = html.Div([
         html.Div(id="table1", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
         html.Br(),
         html.Br(),
-        html.B('Those are the satutration indices of minerals that can precipitate:'),
-        html.Plaintext('When the water sample reaches oversaturation the ceratin mineral will be highlighted in red.'),
+        html.B('Those are the saturation indices of minerals that can precipitate:'),
+        html.Plaintext('When the water sample reaches over-saturation the certain mineral will be highlighted in red.'),
         html.Br(),
         html.Br(),
         html.Div(id="table2", style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'middle'}),
@@ -484,14 +484,14 @@ def update_graph(rows, columns):
     #after reaction generate the output
 
     #get concentration of all species
-    df=pd.DataFrame.from_dict(sol.species, orient='index', columns=['concentration [mol/L]'])
+    df=pd.DataFrame.from_dict(sol.species, orient='index', columns=['concentration [mol/kgw]'])
 
     df = df.rename_axis(['species']).reset_index()
 
 
     # dict comprehension {k: prices[k]*stock[k] for k in prices}
 
-    df['concentration [mg/L]']={key: 1000*value*conv[key] for key,value in sol.species.items()}.values()
+    df['concentration [mg/kgw]']={key: 1000*value*conv[key] for key,value in sol.species.items()}.values()
 
     df['concentration [ppm]'] = {key: 1000 * value * conv[key] for key, value in sol.species.items()}.values()
     #format = Format(precision=4, scheme=Scheme.fixed)
@@ -523,6 +523,8 @@ def update_graph(rows, columns):
     df_phases=pd.DataFrame.from_dict(sol.phases, orient='index', columns=['saturation index (SI)'])
 
     df_phases = df_phases.rename_axis(['mineral']).reset_index()
+
+    df_phases['IAP/Ksp']=10**df_phases['saturation index (SI)']
     # get SI of the phases
 
 
@@ -554,7 +556,14 @@ def update_graph(rows, columns):
                 'color': 'white'
             },
 
-
+            {
+                'if': {
+                    'filter_query': '{IAP/Ksp} >1',
+                    'column_id': 'IAP/Ksp'
+                },
+                'backgroundColor': 'tomato',
+                'color': 'white'
+            },
 
         ]
     )
@@ -571,6 +580,7 @@ def update_graph(rows, columns):
     df_extra=pd.DataFrame.from_dict(d,orient='index',columns=['number'])
 
     df_extra = df_extra.rename_axis(['variable']).reset_index()
+
 
 
     tbl3 = dash_table.DataTable(
