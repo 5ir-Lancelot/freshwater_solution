@@ -114,9 +114,9 @@ server=app.server
 
 filepath = os.path.split(os.path.realpath(__file__))[0]
 
-narrative_text = open(os.path.join(filepath, "narrative.md"), "r").read()
-refs_text = open(os.path.join(filepath, "references.md"), "r").read()
-some_text = open(os.path.join(filepath, "sometext.md"), "r").read()
+narrative_text = open(os.path.join(filepath, "assets/narrative.md"), "r").read()
+refs_text = open(os.path.join(filepath, "assets/references.md"), "r").read()
+some_text = open(os.path.join(filepath, "assets/sometext.md"), "r").read()
 
 
 mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
@@ -154,12 +154,12 @@ app.index_string = '''
 # ==========
 
 # read in the bjerrum plot csv file as lines
-lines=pd.read_table('bjerrum_plot_update_phreeqpython.csv',sep=',', keep_default_na=False\
-                    , na_filter=False, header='infer',engine='python', encoding='utf-8')
+lines=pd.read_table('assets/bjerrum_plot_update_phreeqpython.csv', sep=',', keep_default_na=False \
+                    , na_filter=False, header='infer', engine='python', encoding='utf-8')
 
 
-DIC_line=pd.read_table('open_carbonate_system_phreeqpython.csv',sep=',', keep_default_na=False\
-                    , na_filter=False, header='infer',engine='python', encoding='utf-8')
+DIC_line=pd.read_table('assets/open_carbonate_system_phreeqpython.csv', sep=',', keep_default_na=False \
+                       , na_filter=False, header='infer', engine='python', encoding='utf-8')
 
 
 

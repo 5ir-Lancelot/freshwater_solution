@@ -143,11 +143,14 @@ filepath = os.path.split(os.path.realpath(__file__))[0]
 # the "r" refers to read mode
 # it need tro be a  raw string  so that the markdown text is properly loaded with all the backslashes
 
-narrative_text = open(os.path.join(filepath, "narrative_improved.md"), "r").read()
-refs_text = open(os.path.join(filepath, "references.md"), "r").read()
-some_text = open(os.path.join(filepath, "sometext.md"), "r").read()
-input_text=open(os.path.join(filepath, "Textbox_input.md"), "r").read()
-output_text=open(os.path.join(filepath, "Textbox_output.md"), "r").read()
+narrative_text = open(os.path.join(filepath, "assets/narrative_improved.md"), "r").read()
+refs_text = open(os.path.join(filepath, "assets/references.md"), "r").read()
+some_text = open(os.path.join(filepath, "assets/sometext.md"), "r").read()
+input_text=open(os.path.join(filepath, "assets/Textbox_input.md"), "r").read()
+output_text=open(os.path.join(filepath, "assets/Textbox_output.md"), "r").read()
+
+image_path = 'assets/uhh-logo-web.jpg'
+
 
 
 # mathjax is the program translating the Latex MathML with Javascript to generate html to be displayed in the browser
@@ -252,6 +255,7 @@ params = [
 
 app.layout = html.Div([
     dbc.Container(children=[
+        html.Img(src=image_path),
         dcc.Markdown(narrative_text, mathjax=True),
 
         #input whole editable data table
