@@ -77,7 +77,13 @@ the run command need to be changed on the digitalocean website
 go to app -> settings -> commands -> run command -> edit
 """
 
+'''
+update implementation on uni website
 
+how the wsgi file should look like:
+https://community.plotly.com/t/dash-pythonanywhere-deployment-issue/5062
+
+'''
 
 
 

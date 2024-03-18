@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="new folder to tidy up + uhh logo on website">
-      <change afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="make it run on uni server edits">
+      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -412,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710340672332</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="make it run on uni server edits">
+      <option name="closed" value="true" />
+      <created>1710758576538</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1710758576538</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,7 +436,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/carbonate-system-freshwater" />
     </ignored-roots>
-    <MESSAGE value="new DIC units added" />
     <MESSAGE value="new molar masses implemented &#10;work in progress" />
     <MESSAGE value="new molar masses implemented &#10;work in progress fix 2" />
     <MESSAGE value="new molar masses implemented &#10;work in progress fix 3" />
@@ -455,6 +460,7 @@
     <MESSAGE value="simpler , removed unecessary items" />
     <MESSAGE value="changed text and units" />
     <MESSAGE value="new folder to tidy up + uhh logo on website" />
-    <option name="LAST_COMMIT_MESSAGE" value="new folder to tidy up + uhh logo on website" />
+    <MESSAGE value="make it run on uni server edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="make it run on uni server edits" />
   </component>
 </project>
