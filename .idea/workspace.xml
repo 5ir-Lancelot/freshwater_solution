@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="changed text and units">
-      <change afterPath="$PROJECT_DIR$/assets/uhh-logo-web.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/uhh-logo-web.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2024_23_24_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_03_2024_23_24__Changes_.xml" beforeDir="false" />
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="new folder to tidy up + uhh logo on website">
+      <change afterPath="$PROJECT_DIR$/config/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textbox_input.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Textbox_input.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Textbox_output.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Textbox_output.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app_freshwater.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app_freshwater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/narrative.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/narrative.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/narrative_improved.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/narrative_improved.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/references.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/references.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sometext.md" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sometext.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +77,7 @@
       <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
       <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution\assets" />
     </key>
   </component>
@@ -413,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709913707078</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="new folder to tidy up + uhh logo on website">
+      <option name="closed" value="true" />
+      <created>1710340672332</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1710340672332</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,6 +454,7 @@
     <MESSAGE value="improved Mathjax text , simpler main file" />
     <MESSAGE value="simpler , removed unecessary items" />
     <MESSAGE value="changed text and units" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed text and units" />
+    <MESSAGE value="new folder to tidy up + uhh logo on website" />
+    <option name="LAST_COMMIT_MESSAGE" value="new folder to tidy up + uhh logo on website" />
   </component>
 </project>

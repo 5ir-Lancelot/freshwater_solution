@@ -1,0 +1,1 @@
+from my_app import server as application
