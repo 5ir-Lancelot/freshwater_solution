@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="bigger fontsize , new stylesheet used">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="change in .wsgi file again">
       <change afterPath="$PROJECT_DIR$/assets/datenschutz.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/imprint.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imprint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app.wsgi" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.wsgi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -488,7 +489,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/carbonate-system-freshwater" />
     </ignored-roots>
-    <MESSAGE value="super simple requirements file&#10;generated with Sync Python Requirements." />
     <MESSAGE value="edit requirements" />
     <MESSAGE value="added Werkzeug==2.2.2 to requirements" />
     <MESSAGE value="Merge pull request #1 from cakirmert/master&#10;&#10;fixed requirements, removed unnecessary files, also removed wrong line break" />
@@ -513,6 +513,7 @@
     <MESSAGE value="Impressum, Datenschutz, Barrierefreiheit Bürokratie" />
     <MESSAGE value="include app index string for barrierefreiheit" />
     <MESSAGE value="bigger fontsize , new stylesheet used" />
-    <option name="LAST_COMMIT_MESSAGE" value="bigger fontsize , new stylesheet used" />
+    <MESSAGE value="change in .wsgi file again" />
+    <option name="LAST_COMMIT_MESSAGE" value="change in .wsgi file again" />
   </component>
 </project>
