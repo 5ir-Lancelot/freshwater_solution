@@ -410,11 +410,11 @@ app.layout = html.Div([
         html.Br(),
         #include reference to impressum and data policy
         html.H2('Impressum'),
-        html.A('Impressum Text', href='/assets/imprint.html'),
+        html.A('Impressum', href='/assets/imprint.html'),
         html.Br(),
         html.Br(),
         html.H2('Datenschutz'),
-        html.A('Datenschutz Text', href='/assets/datenschutz.html'),
+        html.A('Datenschutzerklärung', href='/assets/datenschutz.html'),
         html.Br(),
         html.Br(),
         html.H2('Barrierefreiheit'),

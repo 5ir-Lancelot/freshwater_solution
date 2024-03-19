@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="change in .wsgi file again">
-      <change afterPath="$PROJECT_DIR$/assets/datenschutz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/imprint.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/imprint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.wsgi" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.wsgi" afterDir="false" />
-    </list>
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="change in .wsgi file again" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -471,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710859805481</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="change in .wsgi file again">
+      <option name="closed" value="true" />
+      <created>1710862834272</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1710862834272</updated>
+    </task>
+    <task id="LOCAL-00043" summary="change in .wsgi file again">
+      <option name="closed" value="true" />
+      <created>1710863080438</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1710863080438</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
