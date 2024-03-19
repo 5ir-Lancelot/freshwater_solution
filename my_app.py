@@ -379,10 +379,19 @@ app.layout = html.Div([
         
         dcc.Markdown(refs_text,mathjax=True),
         html.Br(),
+        #include reference to impressum and data policy
+        html.H2('Impressum'),
+        html.A('Impressum Text', href='/assets/imprint.html'),
         html.Br(),
         html.Br(),
-         
-        
+        html.H2('Datenschutz'),
+        html.A('Datenschutz Text', href='https://www.uni-hamburg.de/datenschutz.html', target='_blank'),
+        html.Br(),
+        html.Br(),
+        html.H2('Barrierefreiheit'),
+        html.A('Barrierefreiheitserklärung', href='/assets/barrierefreiheitserklärung.html'),
+        html.Br(),
+        html.Br(),
         
     ]),
 ])

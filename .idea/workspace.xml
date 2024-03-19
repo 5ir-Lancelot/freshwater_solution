@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="small text">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="new requirements text file (longer and more detailed)">
+      <change afterPath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/imprint.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +78,8 @@
       <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
       <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution\assets" />
+      <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
     </key>
   </component>
   <component name="RunManager" selected="Python.my_app">
@@ -426,7 +429,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710759153393</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="new requirements text file (longer and more detailed)">
+      <option name="closed" value="true" />
+      <created>1710775083914</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1710775083914</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,7 +455,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/carbonate-system-freshwater" />
     </ignored-roots>
-    <MESSAGE value="new molar masses implemented &#10;work in progress fix 2" />
     <MESSAGE value="new molar masses implemented &#10;work in progress fix 3" />
     <MESSAGE value="new species table added" />
     <MESSAGE value="new code new website for BAM" />
@@ -469,6 +479,7 @@
     <MESSAGE value="new folder to tidy up + uhh logo on website" />
     <MESSAGE value="make it run on uni server edits" />
     <MESSAGE value="small text" />
-    <option name="LAST_COMMIT_MESSAGE" value="small text" />
+    <MESSAGE value="new requirements text file (longer and more detailed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="new requirements text file (longer and more detailed)" />
   </component>
 </project>
