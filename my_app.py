@@ -174,6 +174,28 @@ image_path = 'assets/uhh-logo-web.jpg'
 
 #standard app.index_string
 
+
+app.index_string = '''
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>
+'''
+
+
 # no need to put it just use deault settings
 
 
@@ -257,11 +279,12 @@ params = [
 # ==========
 
 
+
 # changed mathjax=True
 
 app.layout = html.Div([
     dbc.Container(children=[
-        html.Img(src=image_path),
+        html.Img(src=image_path, alt='UHH logo rot weiß png'),
         dcc.Markdown(narrative_text, mathjax=True),
 
         #input whole editable data table
