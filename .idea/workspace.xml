@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="new requirements text file (longer and more detailed)">
-      <change afterPath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/imprint.html" afterDir="false" />
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="Impressum, Datenschutz, Barrierefreiheit Bürokratie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/barrierefreiheitserklärung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -437,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710775083914</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Impressum, Datenschutz, Barrierefreiheit Bürokratie">
+      <option name="closed" value="true" />
+      <created>1710855344709</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1710855344710</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -455,7 +461,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/carbonate-system-freshwater" />
     </ignored-roots>
-    <MESSAGE value="new molar masses implemented &#10;work in progress fix 3" />
     <MESSAGE value="new species table added" />
     <MESSAGE value="new code new website for BAM" />
     <MESSAGE value="super simple requirements file&#10;generated with Sync Python Requirements." />
@@ -480,6 +485,7 @@
     <MESSAGE value="make it run on uni server edits" />
     <MESSAGE value="small text" />
     <MESSAGE value="new requirements text file (longer and more detailed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="new requirements text file (longer and more detailed)" />
+    <MESSAGE value="Impressum, Datenschutz, Barrierefreiheit Bürokratie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Impressum, Datenschutz, Barrierefreiheit Bürokratie" />
   </component>
 </project>
