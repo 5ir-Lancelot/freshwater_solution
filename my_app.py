@@ -113,7 +113,12 @@ pp = phreeqpython.PhreeqPython(database='vitens.dat')
 
 #from components import solve
 
-external_stylesheets = ['https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+# different themes (styles of the webpage) can be found here https://bootswatch.com/
+
+# here you can search for a good free bootstrap CND and just copy the link into the external stylesheets and load it
+# https://www.bootstrapcdn.com/bootswatch/
+
+external_stylesheets = ['https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css',
                         'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css']
 
 #external_stylesheets=[dbc.themes.CYBORG]
@@ -417,7 +422,7 @@ app.layout = html.Div([
         html.Br(),
         
     ]),
-])
+], style={'fontSize': '1.2em'}) # global font size setting
 
 #
 # INTERACTION
