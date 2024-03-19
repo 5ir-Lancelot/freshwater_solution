@@ -118,7 +118,8 @@ pp = phreeqpython.PhreeqPython(database='vitens.dat')
 # here you can search for a good free bootstrap CND and just copy the link into the external stylesheets and load it
 # https://www.bootstrapcdn.com/bootswatch/
 
-external_stylesheets = ['https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css',
+external_stylesheets = ['https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css',
+                        #'https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css',
                         'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css']
 
 #external_stylesheets=[dbc.themes.CYBORG]
@@ -413,7 +414,7 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.H2('Datenschutz'),
-        html.A('Datenschutz Text', href='https://www.uni-hamburg.de/datenschutz.html', target='_blank'),
+        html.A('Datenschutz Text', href='/assets/datenschutz.html'),
         html.Br(),
         html.Br(),
         html.H2('Barrierefreiheit'),
