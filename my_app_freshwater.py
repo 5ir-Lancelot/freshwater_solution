@@ -296,6 +296,8 @@ app.layout = html.Div([
         html.A('Barrierefreiheitserklaerung', href='/assets/barrierefreiheitserklaerung.html'),
         html.Br(),
         html.Br(),
+        html.H2('Test'),
+        html.A('Lol', href='root_page.html'),
          
         
         
