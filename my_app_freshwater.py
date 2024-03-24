@@ -81,8 +81,11 @@ pp = phreeqpython.PhreeqPython(database='vitens.dat')
 
 #from components import solve
 
-external_stylesheets = ['https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+
+external_stylesheets = ['https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css',
+                        #'https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/journal/bootstrap.min.css',
                         'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai-sublime.min.css']
+
 
 #external_stylesheets=[dbc.themes.CYBORG]
 
@@ -114,17 +117,18 @@ server=app.server
 
 filepath = os.path.split(os.path.realpath(__file__))[0]
 
-narrative_text = open(os.path.join(filepath, "assets/narrative.md"), "r").read()
+
+narrative_text = open(os.path.join(filepath, "assets/narrative_improved.md"), "r").read()
 refs_text = open(os.path.join(filepath, "assets/references.md"), "r").read()
 some_text = open(os.path.join(filepath, "assets/sometext.md"), "r").read()
+#input_text=open(os.path.join(filepath, "assets/Textbox_input.md"), "r").read()
+#output_text=open(os.path.join(filepath, "assets/Textbox_output.md"), "r").read()
 
-
-mathjax_script = dji.Import(src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_SVG")
-
+image_path = 'assets/uhh-logo-web.jpg'
 
 app.index_string = '''
 <!DOCTYPE html>
-<html>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
     <head>
         {%metas%}
         <title>{%title%}</title>
@@ -136,14 +140,6 @@ app.index_string = '''
         <footer>
             {%config%}
             {%scripts%}
-            <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({
-                tex2jax: {
-                inlineMath: [ ['$','$'],],
-                processEscapes: true
-                }
-            });
-            </script>
             {%renderer%}
         </footer>
     </body>
@@ -160,7 +156,6 @@ lines=pd.read_table('assets/bjerrum_plot_update_phreeqpython.csv', sep=',', keep
 
 DIC_line=pd.read_table('assets/open_carbonate_system_phreeqpython.csv', sep=',', keep_default_na=False \
                        , na_filter=False, header='infer', engine='python', encoding='utf-8')
-
 
 
 
@@ -236,7 +231,8 @@ T_slider2=dcc.Slider(id='T', min=0, max=100, step=0.5, marks={x: str(x)+'°C' fo
 
 app.layout = html.Div([
     dbc.Container(children=[
-        dcc.Markdown(narrative_text, dangerously_allow_html=True),
+        html.Img(src=image_path, alt='UHH logo red white png'),
+        dcc.Markdown(narrative_text, mathjax=True),
         
         #dcc.Graph(id="sir_solution", figure=display_SIR_solution(solve(delta=0.5, R0=2.67, tau=8.5))),
         
@@ -287,14 +283,24 @@ app.layout = html.Div([
         
         dcc.Markdown(refs_text, dangerously_allow_html=True),
         html.Br(),
+        #include reference to impressum and data policy
+        html.H2('Impressum'),
+        html.A('Impressum', href='/assets/imprint.html'),
+        html.Br(),
+        html.Br(),
+        html.H2('Datenschutz'),
+        html.A('Datenschutzerklaerung', href='/assets/datenschutz.html'),
+        html.Br(),
+        html.Br(),
+        html.H2('Barrierefreiheit'),
+        html.A('Barrierefreiheitserklaerung', href='/assets/barrierefreiheitserklaerung.html'),
         html.Br(),
         html.Br(),
          
         
         
     ]),
-    mathjax_script
-])
+], style={'fontSize': '1.2em'}) # global font size setting)
     
 """  
 # added stuff could be dagerous

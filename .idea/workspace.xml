@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="remove umlaute">
+    <list default="true" id="398361e1-7b9b-415c-951a-4d5f71902af2" name="Changes" comment="small edits">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/datenschutz.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/datenschutz.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_app_freshwater.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_app_freshwater.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <recent name="C:\Users\u301072\PycharmProjects\freshwater_solution" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.my_app">
+  <component name="RunManager" selected="Python.my_app_freshwater">
     <configuration name="my_app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="freshwater_solution" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -500,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710864401206</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="small edits">
+      <option name="closed" value="true" />
+      <created>1710866154833</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1710866154833</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -541,8 +548,8 @@
     <MESSAGE value="include app index string for barrierefreiheit" />
     <MESSAGE value="bigger fontsize , new stylesheet used" />
     <MESSAGE value="change in .wsgi file again" />
-    <MESSAGE value="small edits" />
     <MESSAGE value="remove umlaute" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove umlaute" />
+    <MESSAGE value="small edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="small edits" />
   </component>
 </project>
