@@ -297,7 +297,7 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.H2('Test'),
-        html.A('Lol', href='root_page.html'),
+        html.A('Lol', href='/page.html'),
          
         
         
